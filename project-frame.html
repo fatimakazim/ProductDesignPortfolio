@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Passport — Designing for International Students · Portfolio</title>
+  <meta name="description" content="Designing Internship Passport: a mobile app helping international students navigate CPT/OPT rules, internship search, and application tracking." />
+
+  <!-- Same fonts as main page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Shared design system styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Project page specific styles -->
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <!-- =====================
+       NAVIGATION (same as index)
+  ======================== -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home">AM</a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#work" class="nav__link">Work</a></li>
+        <li><a href="index.html#experience" class="nav__link">Experience</a></li>
+        <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="mailto:alex@example.com" class="nav__cta">Get in touch</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="index.html#work" class="mobile-menu__link" data-close-menu>Work</a></li>
+      <li><a href="index.html#experience" class="mobile-menu__link" data-close-menu>Experience</a></li>
+      <li><a href="index.html#contact" class="mobile-menu__link" data-close-menu>Contact</a></li>
+      <li><a href="mailto:alex@example.com" class="mobile-menu__link mobile-menu__link--cta" data-close-menu>Get in touch →</a></li>
+    </ul>
+  </div>
+
+  <!-- =====================
+       PROJECT HERO
+  ======================== -->
+  <header class="proj-hero" aria-label="Project introduction">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="proj-breadcrumb reveal reveal--up" aria-label="Breadcrumb">
+        <a href="index.html" class="proj-breadcrumb__link">Work</a>
+        <span class="proj-breadcrumb__sep" aria-hidden="true">→</span>
+        <span class="proj-breadcrumb__current">Internship Passport</span>
+      </nav>
+
+      <!-- Title -->
+      <h1 class="proj-hero__title reveal reveal--up" style="--delay:0.05s">
+        Internship Passport — Designing a Platform for International Students
+      </h1>
+
+      <!-- Meta grid -->
+      <dl class="proj-hero__meta reveal reveal--up" style="--delay:0.1s">
+        <div class="proj-hero__meta-item">
+          <dt>My Role</dt>
+          <dd>UI Designer, UX Researcher</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Tools</dt>
+          <dd>Figma, Miro, Notion</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Duration</dt>
+          <dd>September – November 2024</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Type</dt>
+          <dd>Mobile App · Productivity</dd>
+        </div>
+      </dl>
+
+      <!-- Hero image -->
+      <figure class="proj-hero__image-wrap reveal reveal--up" style="--delay:0.15s">
+  <video
+    class="proj-hero__image"
+    width="1280"
+    height="720"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source src="videos/internship-passport-demo.mp4" type="video/mp4">
+  </video>
+</figure>
+
+    </div>
+  </header>
+
+
+  <!-- =====================
+       MAIN CONTENT
+  ======================== -->
+  <main class="proj-body" id="main-content">
+    <div class="container proj-body__container">
+
+      <!-- ── STICKY SECTION NAV (desktop sidebar) ── -->
+      <aside class="proj-toc" aria-label="Page contents">
+        <nav>
+          <p class="proj-toc__label">Contents</p>
+          <ul class="proj-toc__list" role="list">
+            <li><a href="#intro"         class="proj-toc__link is-active">Introduction</a></li>
+            <li><a href="#role"          class="proj-toc__link">My Role</a></li>
+            <li><a href="#research"      class="proj-toc__link">Research</a></li>
+            <li><a href="#user-research" class="proj-toc__link">User Research</a></li>
+            <li><a href="#principles"    class="proj-toc__link">Design Principles</a></li>
+            <li><a href="#features"      class="proj-toc__link">Features</a></li>
+            <li><a href="#wireframes"    class="proj-toc__link">Wireframing</a></li>
+            <li><a href="#usability"     class="proj-toc__link">Usability Study</a></li>
+            <li><a href="#style-guide"   class="proj-toc__link">Style Guide</a></li>
+            <li><a href="#final"         class="proj-toc__link">Final Product</a></li>
+            <li><a href="#reflection"    class="proj-toc__link">Reflection</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ── ARTICLE CONTENT ── -->
+      <article class="proj-article">
+
+        <!-- INTRODUCTION -->
+        <section class="proj-section" id="intro" aria-labelledby="intro-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="intro-heading">Introduction</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>For international students arriving in the United States, the excitement of a new academic chapter often comes packaged with a quiet, persistent anxiety, particularly around the question of working legally. The path to an internship is not just about writing a strong resume or nailing an interview. It involves understanding visa categories, deciphering the difference between CPT and OPT, knowing exactly when to apply for authorization, and making sure every step aligns with immigration regulations. Miss a deadline, misunderstand a rule, or miss a resource buried on your university's DSO webpage, and the consequences can be serious.</p>
+            <p>What makes this harder is how scattered the information is. A student might find general internship listings on LinkedIn, visa policy summaries on their university's international student office website, application tracking in a spreadsheet they built themselves, and answers to nuanced questions buried in Reddit threads. None of these sources talk to each other. None of them were built with international students in mind.</p>
+            <p>Internship Passport was designed to change that. The goal was to build a single, cohesive platform where international students could search for internships, understand their eligibility, track their applications, and learn about CPT and OPT — all without having to piece together information from five different tabs. The central challenge of this project was not just organizing information, but making something that genuinely reduced the anxiety that comes with navigating a high-stakes, unfamiliar system.</p>
+          </div>
+        </section>
+
+        <!-- MY ROLE -->
+        <section class="proj-section" id="role" aria-labelledby="role-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="role-heading">My Role</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>This was an independent class project. I was responsible for every phase, from initial research and competitive analysis to information architecture, prototyping, usability testing, and final UI design. I gathered feedback from peers and my professor at key checkpoints, and conducted user interviews and usability sessions directly with international students on campus. The project ran for approximately ten weeks, from September through November.</p>
+          </div>
+        </section>
+
+        <!-- COMPETITIVE RESEARCH -->
+        <section class="proj-section" id="research" aria-labelledby="research-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="research-heading">The Existing Landscape</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>Before sketching a single screen, I wanted to understand what students were already using and where those tools were falling short. I spent time observing conversations on international student Facebook groups and subreddits, and I dug into the features of four platforms that consistently came up in those discussions. Each had value, but each left clear gaps.</p>
+          </div>
+
+          <!-- Competitor cards -->
+          <div class="competitor-grid reveal reveal--up" style="--delay:0.1s">
+
+            <div class="competitor-card">
+              <div class="competitor-card__logo">
+                <img src="https://placehold.co/80x80/0A66C2/ffffff?text=in" alt="LinkedIn logo" width="80" height="80" />
+              </div>
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">LinkedIn</h3>
+                <p class="competitor-card__desc">The default starting point for most students entering the internship search. Its job listings are extensive, and the ability to see alumni connections at target companies is genuinely useful. But LinkedIn was not designed with international students in mind. There is no way to filter for visa-friendly roles, no guidance on what authorization you need before applying, and no indication of whether a company has ever worked with CPT/OPT candidates. For an international student who does not yet know which companies to approach, LinkedIn can feel like standing in a very large room with no signs.</p>
+              </div>
+            </div>
+
+            <div class="competitor-card">
+              <div class="competitor-card__logo">
+                <img src="https://placehold.co/80x80/E8604C/ffffff?text=HS" alt="Handshake logo" width="80" height="80" />
+              </div>
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">Handshake</h3>
+                <p class="competitor-card__desc">A step closer to the right audience — it lives within the university ecosystem and is often connected to a school's career center. Postings sometimes flag openness to international candidates, which is a meaningful signal. But Handshake still does not explain what CPT or OPT actually is, and the experience varies wildly depending on which university you attend. The resources are inconsistent, and nothing on the platform addresses the compliance side of the internship process.</p>
+              </div>
+            </div>
+
+            <div class="competitor-card">
+              <div class="competitor-card__logo">
+                <img src="https://placehold.co/80x80/003F8F/ffffff?text=U" alt="University portal logo" width="80" height="80" />
+              </div>
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">University Career Portals</h3>
+                <p class="competitor-card__desc">These tend to hold the most accurate, school-specific guidance on work authorization, but they are often clunky to navigate and difficult to discover. Important information gets buried in PDFs, and students who are new to the system may not even know what questions to ask. These portals feel like institutional document libraries more than tools built for a student's actual journey.</p>
+              </div>
+            </div>
+
+            <div class="competitor-card">
+              <div class="competitor-card__logo">
+                <img src="https://placehold.co/80x80/FF4500/ffffff?text=R" alt="Reddit logo" width="80" height="80" />
+              </div>
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">Reddit &amp; Online Forums</h3>
+                <p class="competitor-card__desc">Where students often end up when none of the above gives them a clear answer. Threads about CPT and OPT receive dozens of replies, but those replies are inconsistent, sometimes outdated, and impossible to verify. There is real community here — but the format is not built for reliable, actionable guidance. You can find answers, but you can't trust them.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- USER RESEARCH -->
+        <section class="proj-section" id="user-research" aria-labelledby="user-research-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="user-research-heading">User Research</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>To move beyond assumptions, I conducted interviews with nine international students — a mix of undergraduates and graduate students from different countries and different visa situations. Some were in the early stages of their first U.S. internship search. Others had already completed one or two internships and were navigating the transition from CPT to OPT. I spoke with students in STEM fields and non-STEM fields, since their work authorization timelines and options differ significantly. From these conversations, four consistent themes emerged.</p>
+          </div>
+
+          <!-- Full-bleed image -->
+          <figure class="proj-figure reveal reveal--up" style="--delay:0.1s">
+            <img
+              src= "pictures/img1.png"
+              alt="User research insights summary showing key themes from 9 participant interviews"
+              class="proj-figure__img"
+              loading="lazy"
+              width="1120"
+              height="560"
+            />
+            <figcaption class="proj-figure__caption">Key themes from 9 participant interviews</figcaption>
+          </figure>
+
+          <!-- Insight callouts -->
+          <div class="insight-list reveal reveal--up" style="--delay:0.1s">
+            <div class="insight-item">
+              <span class="insight-item__number">01</span>
+              <div>
+                <h4 class="insight-item__title">The CPT/OPT Distinction Was Genuinely Confusing</h4>
+                <p class="insight-item__text">7 of 9 participants could not confidently explain the difference between CPT and OPT without pausing to second-guess themselves. Students understood that both were forms of work authorization, but the specifics — when each applies, how to apply, the difference between full-time and part-time CPT, and how CPT usage can affect OPT eligibility — were murky. The information was out there; it just wasn't presented in a way that built understanding progressively.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">02</span>
+              <div>
+                <h4 class="insight-item__title">Application Tracking Was Improvised and Unreliable</h4>
+                <p class="insight-item__text">8 of 9 participants were managing internship applications in self-built spreadsheets, notes apps, or — in two cases — purely from memory. Most admitted these systems broke down over time. For international students, where application timing intersects with visa authorization windows, losing track of where an application stands can create real compliance risks, not just inconvenience.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">03</span>
+              <div>
+                <h4 class="insight-item__title">Visa Anxiety Shaped the Entire Search</h4>
+                <p class="insight-item__text">Several participants described a background anxiety that shaped how they approached the internship search — not just whether they would get an offer, but whether they were even allowed to apply and whether they were inadvertently doing something wrong. This led students to apply to fewer companies and spend disproportionate time re-checking information they had already found. No existing platform was addressing this emotional dimension.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">04</span>
+              <div>
+                <h4 class="insight-item__title">Resources Existed, But Felt Impossible to Find</h4>
+                <p class="insight-item__text">Every university represented in my interviews had some form of guidance available for international students. But students consistently described these resources as hard to locate, hard to trust, and disconnected from the actual task of applying. One student spent forty-five minutes on her university's international office website looking for a specific form before giving up and emailing her DSO. The information was out there — it just wasn't organized the way students needed it.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DESIGN PRINCIPLES -->
+        <section class="proj-section" id="principles" aria-labelledby="principles-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="principles-heading">Design Principles</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>These research conversations shaped not just what I built, but how I approached every design decision. The students I spoke with were navigating a high-stakes, unfamiliar system while simultaneously managing coursework, language barriers, and cultural adjustment. The design couldn't add to that burden — it had to actively reduce it. Three principles guided the work from this point forward.</p>
+          </div>
+
+          <div class="principles-grid reveal reveal--up" style="--delay:0.1s">
+            <div class="principle-card">
+              <figure class="principle-card__image-wrap">
+                <img
+                  src= "pictures/2.png"
+                  alt="Clarity First principle illustration"
+                  class="principle-card__image"
+                  loading="lazy"
+                  width="560"
+                  height="360"
+                />
+              </figure>
+              <h3 class="principle-card__title">Clarity First</h3>
+              <p class="principle-card__desc">Visa regulations are genuinely complex, but that complexity does not need to be reflected in the interface. Every explanation, label, and piece of guidance should be written for a student encountering this information for the first time — clear, jargon-free, and precise without being overwhelming. If a student has to re-read a sentence twice to understand it, that is a design failure.</p>
+            </div>
+            <div class="principle-card">
+              <figure class="principle-card__image-wrap">
+                <img
+                    src= "pictures/3.png"
+                  alt="Guided Confidence principle illustration"
+                  class="principle-card__image"
+                  loading="lazy"
+                  width="560"
+                  height="360"
+                />
+              </figure>
+              <h3 class="principle-card__title">Guided Confidence</h3>
+              <p class="principle-card__desc">The goal of the app is not just to provide information, but to help students feel capable of acting on it. That means structuring the experience so each step forward feels manageable, presenting eligibility information proactively rather than making students hunt for it, and designing interactions that acknowledge the stakes without amplifying the anxiety. The app should feel like a knowledgeable friend, not an official form.</p>
+            </div>
+            <div class="principle-card">
+              <figure class="principle-card__image-wrap">
+                <img
+                    src= "pictures/4.png"
+                  alt="Low Cognitive Load principle illustration"
+                  class="principle-card__image"
+                  loading="lazy"
+                  width="560"
+                  height="360"
+                />
+              </figure>
+              <h3 class="principle-card__title">Low Cognitive Load</h3>
+              <p class="principle-card__desc">Complex processes — CPT authorization, multi-stage applications, eligibility checks — need to be broken into clear, sequential steps. Information should be layered: the most important thing first, with detail available for those who want it. The app should never ask students to hold too much in their heads at once.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="proj-section" id="features" aria-labelledby="features-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="features-heading">Feature Narrative</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>With these principles as a foundation, I mapped the core features the app would need to deliver. The goal was not just to build a smarter job board, but to create a complete end-to-end experience that guided students from visa eligibility all the way through to application tracking.</p>
+          </div>
+
+          <ul class="feature-list reveal reveal--up" style="--delay:0.1s">
+            <li class="feature-list__item">
+              <span class="feature-list__label">Onboarding with Visa Status Selection</span>
+              <p class="feature-list__desc">New users identify their current visa status, field of study, and program end date at the start of their experience. This single input personalizes everything that follows — which CPT/OPT options are relevant to them, which internship filters apply, and what timeline guidance the dashboard surfaces.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Internship Search</span>
+              <p class="feature-list__desc">Filtered listings with the ability to narrow results by visa-friendliness, field, location, and timeline. Unlike a general job board, this search is designed with the international student's constraints at the center — not as an afterthought. The default sort order is Visa Match, not recency.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Job Detail Pages</span>
+              <p class="feature-list__desc">Beyond the standard listing format, each detail page includes a Visa Compatibility Score, a Sponsorship Verified or Sponsorship Unclear badge with an honest explanation of what each means, and practical advice for how to proceed regardless of a company's status.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Application Tracker</span>
+              <p class="feature-list__desc">A single place to log, update, and review every internship a student is pursuing. Entries are organized by stage — Saved, Applied, Interviewing, Offers — with horizontal progress bars that make the current state of each application visible at a glance.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">CPT/OPT Guide</span>
+              <p class="feature-list__desc">An in-app resource that explains both authorization types in plain language, walks through the application process step by step, and surfaces relevant deadlines and eligibility checkboxes based on the student's visa status. This was the feature students responded to most strongly in research.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Resource Library</span>
+              <p class="feature-list__desc">A 2×2 card grid organizing guidance into CPT Guide, OPT Info, Visa Tips, and Resume Guide. Below the grid, Upcoming Reminders surfaces time-sensitive actions so students always know what needs their attention without hunting for it.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Personalized Dashboard</span>
+              <p class="feature-list__desc">The app's home base — greeting students by name, surfacing four key stats (applied, interviews, saved, deadlines), a Visa Timeline card with days remaining and an On Track status badge, and an Up Next section showing the most pressing calendar items.</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- WIREFRAMING -->
+        <section class="proj-section" id="wireframes" aria-labelledby="wireframes-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="wireframes-heading">Wireframing</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>I began wireframing on a whiteboard, mapping the full user flow before committing anything to Figma. I found it easier to see the system as a whole at this stage — where screens connected, where students might get lost, and where information needed to be surfaced earlier than I had initially planned. I worked through at least three versions of the dashboard and the CPT/OPT guide in particular, since those were the screens where information architecture mattered most.</p>
+            <p>The key tension in the wireframes was between depth and accessibility. The CPT/OPT guide contains genuinely complex information — but if it reads like a government document, students won't engage with it. I experimented with a progressive disclosure model, where the guide opens with a simple overview and lets students drill into specifics as needed. This felt closer to how students described wanting to learn: starting with the big picture, then filling in detail when they needed it. Once the whiteboard flows felt solid, I moved into Figma to build low-fidelity wireframes for every core screen, then refined them into a mid-fidelity prototype ready for usability testing.</p>
+          </div>
+
+         <!-- Single wireframe image -->
+<div class="image-single reveal reveal--up" style="--delay:0.3s">
+  <figure class="image-single__item">
+    <img
+      src="pictures/wireframe.png"
+      alt="Low-fidelity Figma wireframes for core screens"
+      class="image-single__img"
+      loading="lazy"
+      width="1000"
+      height="700"
+    />
+    <figcaption class="image-single__caption">Figma wireframes</figcaption>
+  </figure>
+</div>
+
+          <!-- Use cases — 4-up grid -->
+          <!-- <h3 class="proj-section__subheading reveal reveal--up">Use Cases</h3>
+          <div class="image-grid image-grid--4col reveal reveal--up" style="--delay:0.05s">
+            <figure class="image-grid__item">
+              <img src="https://placehold.co/400x500/F0EDE7/888?text=Use+Case+1%0AFirst-time+Search" alt="Use case 1: first-time search" class="image-grid__img" loading="lazy" width="400" height="500"/>
+            </figure>
+            <figure class="image-grid__item">
+              <img src="https://placehold.co/400x500/E8E4DE/888?text=Use+Case+2%0ACPT+Authorization" alt="Use case 2: CPT authorization" class="image-grid__img" loading="lazy" width="400" height="500"/>
+            </figure>
+            <figure class="image-grid__item">
+              <img src="https://placehold.co/400x500/DDDAD4/888?text=Use+Case+3%0AApplication+Tracking" alt="Use case 3: application tracking" class="image-grid__img" loading="lazy" width="400" height="500"/>
+            </figure>
+            <figure class="image-grid__item">
+              <img src="https://placehold.co/400x500/E4E4E0/888?text=Use+Case+4%0AOPT+Timeline" alt="Use case 4: OPT timeline" class="image-grid__img" loading="lazy" width="400" height="500"/>
+            </figure>
+          </div> -->
+
+          <!-- User flows — stacked images -->
+          <h3 class="proj-section__subheading reveal reveal--up">User Flow</h3>
+          <div class="flow-images reveal reveal--up" style="--delay:0.05s">
+            <figure class="proj-figure">
+              <img
+                src="pictures/userflow.png"
+                alt="User flow of the complete app"
+                class="proj-figure__img"
+                loading="lazy"
+                width="1120"
+                height="480"
+              />
+              <figcaption class="proj-figure__caption">Onboarding flow — visa status selection to personalized dashboard</figcaption>
+            <!-- </figure>
+            <figure class="proj-figure">
+              <img
+                src="https://placehold.co/1120x480/DDDAD4/888888?text=User+Flow+%E2%80%93+Search+to+Application+Tracker"
+                alt="User flow: internship search to application tracker"
+                class="proj-figure__img"
+                loading="lazy"
+                width="1120"
+                height="480"
+              />
+              <figcaption class="proj-figure__caption">Search to tracker flow — finding, saving, and tracking an application</figcaption>
+            </figure> -->
+          </div>
+        </section>
+
+        <!-- USABILITY STUDY -->
+        <!-- <section class="proj-section" id="usability" aria-labelledby="usability-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="usability-heading">Usability Study</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>I ran a remote usability study with five international students who had not been involved in the earlier research phase. Each participant was given a set of tasks to complete using the mid-fidelity prototype — including setting up their profile with their visa status, searching for an internship in their field, saving a listing to their tracker, and navigating to the CPT/OPT guide. Participants shared their screens and spoke aloud throughout. Four significant insights shaped the final design.</p>
+          </div> -->
+
+          <!-- Findings — before/after pairs -->
+          <!-- <div class="finding-list">
+
+            <div class="finding-item reveal reveal--up" style="--delay:0.05s">
+              <div class="finding-item__header">
+                <span class="finding-item__number">01</span>
+                <h3 class="finding-item__title">Eligibility Information Was Too Hard to Find</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Several participants spent considerable time searching for information about whether they were eligible to apply for a specific internship before they had even read the full job description. They expected this to be visible near the top of the job detail page but couldn't find it.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> A prominent Visa Compatibility Score section was added directly below the role title and tags, showing the percentage match and a color-coded bar. A Sponsorship Verified or Sponsorship Unclear badge was added to both the listing card and detail page, making visa information the first thing a student sees.</p>
+              <div class="before-after">
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/F0EDE7/888?text=Before%0AVisa+info+buried" alt="Before: visa compatibility information buried in job detail page" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">Before</figcaption>
+                </figure>
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/0D1117/4A9EFF?text=After%0AVisa+score+prominent" alt="After: visa compatibility score shown prominently on job detail page" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">After</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="finding-item reveal reveal--up" style="--delay:0.05s">
+              <div class="finding-item__header">
+                <span class="finding-item__number">02</span>
+                <h3 class="finding-item__title">The Onboarding Flow Was Too Long</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Three of five participants abandoned or skipped portions of the onboarding before completing it. The initial setup asked for too much information at once, and students felt uncertain about why certain details were needed.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> Onboarding was shortened to three core fields — visa status, field of study, and program end date — with a brief explanation of how each input personalizes the experience. A note beneath the date field explains exactly why it is needed: to calculate CPT/OPT eligibility windows. A "Skip for now" option was added alongside the primary CTA.</p>
+              <div class="before-after">
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/F0EDE7/888?text=Before%0AOverlong+onboarding" alt="Before: lengthy onboarding form with too many fields" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">Before</figcaption>
+                </figure>
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/0D1117/4A9EFF?text=After%0AStreamlined+3+fields" alt="After: streamlined onboarding with three fields and explanatory note" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">After</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="finding-item reveal reveal--up" style="--delay:0.05s">
+              <div class="finding-item__header">
+                <span class="finding-item__number">03</span>
+                <h3 class="finding-item__title">The Application Tracker Lacked Status Clarity</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Participants who added a listing to the tracker weren't sure how to update its status as they moved through the process. The tracker felt more like a saved list than an active process tool.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> The tracker was redesigned around a horizontal tab bar — Saved, Applied, Interviewing, Offers — so students see only applications relevant to their current stage. Each entry now shows a horizontal progress bar tracking the stage reached: Applied, Phone Screen, Interview, Offer, Done. Progress bars are filled in electric blue, making forward movement visually obvious at a glance.</p>
+              <div class="before-after">
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/F0EDE7/888?text=Before%0AStatic+list+view" alt="Before: application tracker as a static saved list" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">Before</figcaption>
+                </figure>
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/0D1117/4A9EFF?text=After%0AProgress+bars+%2B+tabs" alt="After: application tracker with tab navigation and progress bars" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">After</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="finding-item reveal reveal--up" style="--delay:0.05s">
+              <div class="finding-item__header">
+                <span class="finding-item__number">04</span>
+                <h3 class="finding-item__title">The CPT/OPT Guide Felt Overwhelming at First Glance</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> When participants first opened the CPT/OPT guide, they saw a dense list of topics and immediately felt uncertain about where to start. Two participants said they would probably close the guide and look elsewhere.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> The guide was restructured to lead with a plain-language definition, then three scannable eligibility checkboxes, then a highlighted Important Rule callout in amber for the most critical compliance nuance (CPT affecting OPT eligibility), followed by numbered application steps. The entry point became structured and progressive rather than a flat wall of topics.</p>
+              <div class="before-after">
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/F0EDE7/888?text=Before%0AFlat+topic+list" alt="Before: CPT guide as a flat list of topics" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">Before</figcaption>
+                </figure>
+                <figure class="before-after__item">
+                  <img src="https://placehold.co/540x640/0D1117/22C55E?text=After%0AStructured+guide" alt="After: CPT guide with definition, checkboxes, and numbered steps" class="before-after__img" loading="lazy" width="540" height="640"/>
+                  <figcaption class="before-after__label">After</figcaption>
+                </figure>
+              </div>
+            </div>
+
+          </div> 
+        </section> -->
+
+        <!-- STYLE GUIDE -->
+        <section class="proj-section" id="style-guide" aria-labelledby="style-guide-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="style-guide-heading">Style Guide</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The visual identity of Internship Passport is anchored in a dark theme — a deliberate choice that sets it apart from the typical light-mode career tools students encounter daily, and one that carries its own meaning. Dark interfaces tend to feel focused, serious, and low-distraction. For an app asking students to engage with compliance timelines and visa rules, that tone felt right. The design system is built around three layers of color: surfaces, accents, and a semantic traffic-light system that lets students read visa compatibility status at a glance.</p>
+          </div>
+
+          <figure class="proj-figure reveal reveal--up" style="--delay:0.1s">
+            <img
+               src="pictures/styleguide.png"
+              alt="Internship Passport style guide showing color palette, typography, and components"
+              class="proj-figure__img"
+              loading="lazy"
+              width="1120"
+              height="560"
+            />
+            <figcaption class="proj-figure__caption">Style set — color palette, typography, and component library</figcaption>
+          </figure>
+
+          <!-- Style tokens display -->
+          <div class="style-tokens reveal reveal--up" style="--delay:0.1s">
+            <div class="style-token">
+              <div class="style-token__swatch" style="background:#0D1117;"></div>
+              <span class="style-token__label">Surface</span>
+              <span class="style-token__value">#0D1117</span>
+            </div>
+            <div class="style-token">
+              <div class="style-token__swatch" style="background:#161B22;"></div>
+              <span class="style-token__label">Card</span>
+              <span class="style-token__value">#161B22</span>
+            </div>
+            <div class="style-token">
+  <div class="style-token__swatch" style="background:#6CB6FF;"></div>
+  <span class="style-token__label">Malibu</span>
+  <span class="style-token__value">#6CB6FF</span>
+</div>
+
+<div class="style-token">
+  <div class="style-token__swatch" style="background:#FACC15;"></div>
+  <span class="style-token__label">Lightning Yellow</span>
+  <span class="style-token__value">#FACC15</span>
+</div>
+
+<div class="style-token">
+  <div class="style-token__swatch" style="background:#22C55E;"></div>
+  <span class="style-token__label">Shamrock</span>
+  <span class="style-token__value">#22C55E</span>
+</div>
+
+<div class="style-token">
+  <div class="style-token__swatch" style="background:#C084FC; border: 1px solid #C084FC;"></div>
+  <span class="style-token__label">Heliotrope</span>
+  <span class="style-token__value">#C084FC</span>
+</div>
+
+          <div class="proj-prose reveal reveal--up" style="--delay:0.1s">
+            <p>The background palette is built from deep navy and near-black tones, creating a layered depth that keeps different content areas visually distinct without relying on heavy borders or dividers. The accent color — electric blue (#4A9EFF) — appears in call-to-action buttons, active navigation states, and progress bar fills throughout the tracker. A secondary green accent is used specifically for "Sponsorship Verified" badges, providing an immediate reassuring signal that a company has been confirmed as international-friendly. Amber is reserved for warning states like "Sponsorship Unclear," completing an intuitive traffic-light system students can read instantly. In the CPT and OPT guide screens, key terms and section headings are set in a bright teal-green, creating visual landmarks in otherwise text-heavy content.</p>
+            <p>Typography is clean and utilitarian, set in a sans-serif system font stack that performs consistently across iOS and Android. The component library is built around dark-surface cards with subtle inner borders, pill-shaped filter tabs for category switching, and horizontal progress bars in the tracker. The bottom navigation bar keeps four destinations persistently accessible — Home, Tracker, Resources, and Profile — labeled and icon-paired so nothing requires guesswork.</p>
+          </div>
+        </section>
+
+        <!-- FINAL PRODUCT -->
+        <section class="proj-section" id="final" aria-labelledby="final-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="final-heading">Final Product</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The final prototype brings together all research, design principles, and usability findings into a cohesive mobile app experience. Below are the key screens from each user journey, from first open to CPT authorization.</p>
+          </div>
+
+          <!-- Final screens — labelled groups -->
+          <div class="final-screens">
+
+            <!-- Splash & Onboarding -->
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Splash Screen &amp; Onboarding</h3>
+              <div class="image-grid image-grid--2col">
+                <figure class="image-grid__item">
+                  <img src="pictures/Frame 1.png" alt="Internship Passport splash screen with wordmark and tagline" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Splash screen</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/Frame 2.png" alt="Onboarding form with visa status, field of study, and program end date" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Profile setup — visa status &amp; field of study</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Dashboard (Home)</h3>
+              <figure class="proj-figure">
+                <img
+                  src="pictures/Frame 3.png"
+                  alt="Personalized dashboard showing greeting, stat tiles, visa timeline card, and up next section"
+                  class="proj-figure__img proj-figure__img--phone-center"
+                  loading="lazy"
+                  width="390"
+                  height="844"
+                />
+                <figcaption class="proj-figure__caption">Personalized dashboard — stat tiles, visa timeline, and upcoming deadlines</figcaption>
+              </figure>
+            </div>
+
+            <!-- Search -->
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Internship Search</h3>
+              <div class="image-grid image-grid--2col">
+                <figure class="image-grid__item">
+                  <img src="pictures/Frame 4.png" alt="Search results showing listings with Sponsorship Verified badge and visa compatibility score" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Search — Sponsorship Verified listing</figcaption>
+                </figure>
+                <!-- <figure class="image-grid__item">
+                  <img src="pictures/Frame 5.png" alt="Search results showing listing with Sponsorship Unclear badge and lower compatibility score" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Search — Sponsorship Unclear listing</figcaption>
+                </figure> -->
+              </div>
+            </div>
+
+            <!-- Job Detail -->
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Job Detail Page</h3>
+              <figure class="proj-figure">
+                <img
+                  src="pictures/Frame 5.png"
+                  alt="Job detail page showing visa compatibility score, sponsorship unclear warning block with advisory text, and apply button"
+                  class="proj-figure__img proj-figure__img--phone-center"
+                  loading="lazy"
+                  width="390"
+                  height="844"
+                />
+                <figcaption class="proj-figure__caption">Job detail — visa compatibility score and sponsorship advisory</figcaption>
+              </figure>
+            </div>
+
+            <!-- Application Tracker -->
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Application Tracker</h3>
+              <figure class="proj-figure">
+                <img
+                  src="pictures/fr6.png"
+                  alt="Application tracker showing the Interviewing tab with three active applications each displaying horizontal progress bars"
+                  class="proj-figure__img proj-figure__img--phone-center"
+                  loading="lazy"
+                  width="390"
+                  height="844"
+                />
+                <figcaption class="proj-figure__caption">Tracker — Interviewing tab with stage progress bars</figcaption>
+              </figure>
+            </div>
+
+            <!-- Resources & CPT/OPT Guides -->
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Resources, CPT Guide &amp; OPT Info</h3>
+              <div class="image-grid image-grid--3col">
+                <figure class="image-grid__item">
+                  <img src="pictures/fr9.png"alt="Resources screen showing 2x2 card grid and upcoming reminders section" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Resources — guides &amp; reminders</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/fr8.png" alt="CPT guide showing teal-green heading, eligibility checkboxes, amber important rule callout, and numbered steps" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">CPT Guide — eligibility &amp; steps</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/fr7.png" alt="OPT info screen showing application window timeline bar and key rules as checkboxes" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">OPT Info — timeline &amp; key rules</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Profile</h3>
+              <figure class="proj-figure">
+                <img
+                  src="pictures/fr10.png"
+                  alt="Profile screen showing student name, university, F-1 Visa and OPT Eligible status badges, and settings list"
+                  class="proj-figure__img proj-figure__img--phone-center"
+                  loading="lazy"
+                  width="390"
+                  height="844"
+                />
+                <figcaption class="proj-figure__caption">Profile — visa status badges and settings</figcaption>
+              </figure>
+            </div>
+
+          </div><!-- /.final-screens -->
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="proj-section" id="reflection" aria-labelledby="reflection-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="reflection-heading">Personal Reflection</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>When I started this project, I expected the hardest design challenge to be organizing complex information clearly. That turned out to be the second hardest challenge. The hardest was understanding that for the students who would use this app, the stakes were not just practical — they were deeply personal. Getting CPT authorization wrong, missing a deadline, or misunderstanding eligibility is not a minor inconvenience. It can affect a student's ability to stay in the country they have built their academic life around. Designing for that context required a kind of care that went beyond layout and typography.</p>
+            <p>What I underestimated going into the research was how much the anxiety dimension would reshape my priorities. I went in thinking the core problem was information architecture. I came out understanding that the core problem was trust — helping students feel confident enough in the information they were receiving to actually act on it. That shift influenced everything from the tone of the copy to the decision to lead the CPT/OPT guide with structured, scannable content rather than a flat wall of topics. It's also why the Job Detail page includes advisory text for Sponsorship Unclear listings rather than simply flagging them as a dead end — students deserve context, not just verdicts.</p>
+            <p>There is still significant room to grow. The current version relies on manually curated job listings and resources, which would require real infrastructure investment to scale. Integrating with university DSO systems — so that CPT timeline guidance is pulled from actual academic calendars — would make the dashboard dramatically more useful. I also see potential in community features: a space where students can share experiences with specific companies, ask questions, and find one another. The research conversations I had were full of that mutual support. There is something worth designing around that instinct. Most importantly, this project reminded me that the best UX work is not about clever interfaces. It is about genuinely understanding who you are designing for, and having the patience to sit with their experience long enough to feel what they feel.</p>
+          </div>
+        </section>
+
+      </article><!-- /.proj-article -->
+    </div><!-- /.proj-body__container -->
+  </main>
+
+
+  <!-- =====================
+       PROJECT NAVIGATION
+  ======================== -->
+  <nav class="proj-nav" aria-label="Project navigation">
+    <div class="container">
+      <a href="index.html" class="proj-nav__back reveal reveal--up">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M12 8H4M4 8L8 4M4 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Home
+      </a>
+      <a href="project-frame.html" class="proj-nav__next reveal reveal--up" style="--delay:0.05s">
+        <span>Next Project</span>
+        <strong>Internship Passport</strong>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4 8H12M12 8L8 4M12 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- =====================
+       FOOTER
+  ======================== -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <!-- <p class="footer__copy">© 2025 Alex Mercer. Designed with care.</p> -->
+      <p class="footer__back">
+        <a href="#" class="footer__top-link" aria-label="Back to top">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>

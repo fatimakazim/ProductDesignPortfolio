@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Until the Ice Melts — Ambient 3D Focus Timer · Portfolio</title>
+  <meta name="description" content="An ambient 3D focus timer built with Three.js, Web Audio API, and a custom physics engine." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="ice.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home">AM</a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#work" class="nav__link">Work</a></li>
+        <li><a href="index.html#experience" class="nav__link">Experience</a></li>
+        <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="mailto:alex@example.com" class="nav__cta">Get in touch</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="index.html#work" class="mobile-menu__link" data-close-menu>Work</a></li>
+      <li><a href="index.html#experience" class="mobile-menu__link" data-close-menu>Experience</a></li>
+      <li><a href="index.html#contact" class="mobile-menu__link" data-close-menu>Contact</a></li>
+      <li><a href="mailto:alex@example.com" class="mobile-menu__link mobile-menu__link--cta" data-close-menu>Get in touch →</a></li>
+    </ul>
+  </div>
+
+  <!-- PROJECT HERO -->
+  <header class="proj-hero" aria-label="Project introduction">
+    <div class="container">
+
+      <nav class="proj-breadcrumb reveal reveal--up" aria-label="Breadcrumb">
+        <a href="index.html" class="proj-breadcrumb__link">Work</a>
+        <span class="proj-breadcrumb__sep" aria-hidden="true">→</span>
+        <span class="proj-breadcrumb__current">Study Until the Ice Melts</span>
+      </nav>
+
+      <h1 class="proj-hero__title reveal reveal--up" style="--delay:0.05s">
+        Study Until the Ice Melts — An Ambient 3D Focus Timer
+      </h1>
+
+      <dl class="proj-hero__meta reveal reveal--up" style="--delay:0.1s">
+        <div class="proj-hero__meta-item">
+          <dt>My Role</dt>
+          <dd>UI/UX Designer &amp; Front-End Developer</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Tools</dt>
+          <dd>Three.js, Vanilla JS, Web Audio API, Figma</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Duration</dt>
+          <dd>2024</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Type</dt>
+          <dd>Web App · PWA · Interactive Media</dd>
+        </div>
+      </dl>
+
+      <figure class="proj-hero__image-wrap reveal reveal--up" style="--delay:0.15s">
+        <video
+          class="proj-hero__image"
+          width="1280"
+          height="720"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        >
+          <source src="videos/ice-timer-demo.mp4" type="video/mp4">
+          <img src="pictures/ice-hero.png" alt="Study Until the Ice Melts — ambient 3D focus timer" />
+        </video>
+      </figure>
+
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="proj-body" id="main-content">
+    <div class="container proj-body__container">
+
+      <!-- STICKY TOC -->
+      <aside class="proj-toc" aria-label="Page contents">
+        <nav>
+          <p class="proj-toc__label">Contents</p>
+          <ul class="proj-toc__list" role="list">
+            <li><a href="#overview"    class="proj-toc__link is-active">Overview</a></li>
+            <li><a href="#features"    class="proj-toc__link">Features</a></li>
+            <li><a href="#engineering" class="proj-toc__link">Technical</a></li>
+            <li><a href="#challenges"  class="proj-toc__link">Challenges</a></li>
+            <li><a href="#final"       class="proj-toc__link">Screens</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="proj-article">
+
+        <!-- OVERVIEW -->
+        <section class="proj-section" id="overview" aria-labelledby="overview-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="overview-heading">Overview</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>A focus timer with no countdown. Your session lasts exactly as long as virtual ice takes to melt — shaped by the temperature you choose and the number of cubes you drop into a real-time 3D glass of water.</p>
+            <p>Designed and built end-to-end: Figma UI, Three.js 3D environment, custom physics engine, Web Audio API spatial audio, and a PWA that installs directly from the browser.</p>
+          </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="proj-section" id="features" aria-labelledby="features-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="features-heading">Features</h2>
+
+          <ul class="feature-list reveal reveal--up" style="--delay:0.05s">
+            <li class="feature-list__item">
+              <span class="feature-list__label">Ice Melt Mode</span>
+              <p class="feature-list__desc">Set temperature (1–5) and cube count (up to 8). Session length is organic — approximate by design, not a fixed countdown.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Pomodoro &amp; Deep Work</span>
+              <p class="feature-list__desc">25-minute and 60–90 minute fixed modes. The app auto-calculates the correct ice configuration and drops it into the scene.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Real-Time 3D Environment</span>
+              <p class="feature-list__desc">Glass, water, and physically-simulated ice rendered via Three.js with MeshPhysicalMaterial, clearcoat, refraction, and ACESFilmic tone mapping.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Spatial Audio Engine</span>
+              <p class="feature-list__desc">Ambient loops (Rain, Café, White Noise) plus randomized ice clink sounds on collision — all routed through the Web Audio API.</p>
+            </li>
+            <li class="feature-list__item">
+              <span class="feature-list__label">Progressive Web App</span>
+              <p class="feature-list__desc">Installable from the browser. Offline-capable via service worker. Renders edge-to-edge on iOS behind the Dynamic Island.</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- TECHNICAL HIGHLIGHTS -->
+        <section class="proj-section" id="engineering" aria-labelledby="engineering-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="engineering-heading">Technical Highlights</h2>
+
+          <div class="insight-list reveal reveal--up" style="--delay:0.05s">
+            <div class="insight-item">
+              <span class="insight-item__number">01</span>
+              <div>
+                <h4 class="insight-item__title">Custom Physics — No Library</h4>
+                <p class="insight-item__text">Gravity, restitution, and per-frame damping written from scratch inside the Three.js render loop. Each cube carries its own velocity state, age counter, and settled flag.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">02</span>
+              <div>
+                <h4 class="insight-item__title">Baked Environment Maps</h4>
+                <p class="insight-item__text">Runtime-generated via WebGLCubeRenderTarget — no external HDRIs, no decode overhead. Per-cube vertex displacement produces organic, non-uniform ice silhouettes.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">03</span>
+              <div>
+                <h4 class="insight-item__title">Audio Unlock Architecture</h4>
+                <p class="insight-item__text">Splash screen captures the first user gesture to initialize AudioContext and prime all tracks at zero volume — cleanly bypassing iOS and Android auto-play restrictions.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">04</span>
+              <div>
+                <h4 class="insight-item__title">Mobile Performance</h4>
+                <p class="insight-item__text">Pixel ratio capped at 2. 180ms throttle on collision audio. Stable framerates across tested iPhones without thermal throttling.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CHALLENGES -->
+        <section class="proj-section" id="challenges" aria-labelledby="challenges-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="challenges-heading">Challenges &amp; Solutions</h2>
+
+          <div class="finding-list">
+
+            <div class="finding-item reveal reveal--up" style="--delay:0.05s">
+              <div class="finding-item__header">
+                <span class="finding-item__number">01</span>
+                <h3 class="finding-item__title">Mobile Audio Auto-play Policies</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> iOS and Android block AudioContext creation until a direct user gesture is detected.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> Onboarding splash doubles as an audio unlock gate — the first tap initializes and primes all tracks before the session begins.</p>
+            </div>
+
+            <div class="finding-item reveal reveal--up" style="--delay:0.05s">
+              <div class="finding-item__header">
+                <span class="finding-item__number">02</span>
+                <h3 class="finding-item__title">3D Performance on Mobile</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Refractive MeshPhysicalMaterial is GPU-intensive — drops below 30fps and causes thermal throttling on mobile.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> Baked environment maps at startup eliminate HDRI decode cost. Pixel ratio capped at 2. ~40% GPU load reduction on tested devices.</p>
+            </div>
+
+            <div class="finding-item reveal reveal--up" style="--delay:0.05s">
+              <div class="finding-item__header">
+                <span class="finding-item__number">03</span>
+                <h3 class="finding-item__title">Native Feel Without an App Store</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Browser chrome breaks immersion on iOS — the Safari toolbar signals "webpage," not "environment."</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> PWA + service worker + <code>apple-mobile-web-app-status-bar-style="black-translucent"</code> renders the canvas edge-to-edge behind the Dynamic Island.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SCREENS -->
+         <!-- SCREEN -->
+<section class="proj-section" id="final" aria-labelledby="final-heading">
+  <h2 class="proj-section__heading reveal reveal--up" id="final-heading">
+    Screens
+  </h2>
+
+  <figure class="proj-figure reveal reveal--up" style="--delay:0.05s">
+    <img
+      src="pictures/ice-screen.png"
+      alt="Study Until the Ice Melts application interface"
+      class="proj-figure__img"
+      loading="lazy"
+      width="1400"
+      height="800"
+    />
+  </figure>
+</section>
+        <!-- <section class="proj-section" id="final" aria-labelledby="final-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="final-heading">Screens</h2>
+
+          <div class="final-screens">
+
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Onboarding</h3>
+              <div class="image-grid image-grid--2col">
+                <figure class="image-grid__item">
+                  <img src="pictures/ice-frame-1.png" alt="Splash screen" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Splash screen</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/ice-frame-2.png" alt="Mechanics tutorial" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Mechanics tutorial</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Live 3D Environment</h3>
+              <figure class="proj-figure">
+                <img
+                  src="pictures/ice-frame-3.png"
+                  alt="Active session — 3D glass, water, and ice with controls overlay"
+                  class="proj-figure__img"
+                  loading="lazy"
+                  width="1120"
+                  height="700"
+                />
+                <figcaption class="proj-figure__caption">Active session — glass, water, and ice in real time</figcaption>
+              </figure>
+            </div>
+
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Controls &amp; Audio</h3>
+              <div class="image-grid image-grid--2col">
+                <figure class="image-grid__item">
+                  <img src="pictures/ice-frame-4.png" alt="Mode selector and temperature controls" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Mode &amp; temperature controls</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/ice-frame-5.png" alt="Ambient audio panel" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Ambient audio panel</figcaption>
+                </figure>
+              </div>
+            </div>
+
+          </div>
+        </section> -->
+
+      </article>
+    </div>
+  </main>
+
+
+  <!-- PROJECT NAVIGATION -->
+  <!-- <nav class="proj-nav" aria-label="Project navigation">
+    <div class="container">
+      <a href="index.html" class="proj-nav__back reveal reveal--up">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M12 8H4M4 8L8 4M4 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Home
+      </a>
+      <a href="project-frame.html" class="proj-nav__next reveal reveal--up" style="--delay:0.05s">
+        <span>Next Project</span>
+        <strong>Internship Passport</strong>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4 8H12M12 8L8 4M12 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </nav> -->
+
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <p class="footer__back">
+        <a href="#" class="footer__top-link" aria-label="Back to top">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>
