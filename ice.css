@@ -82,7 +82,7 @@
 /* Hero image / video */
 .proj-hero__image-wrap {
   /* Portrait / phone content: cap width so it doesn't fill the full container */
-  max-width: 280px;
+  max-width: 880px;
   width: 100%;
   margin-inline: auto;          /* center it */
   border-radius: var(--radius-lg);

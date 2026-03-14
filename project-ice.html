@@ -67,7 +67,7 @@
         </div>
         <div class="proj-hero__meta-item">
           <dt>Duration</dt>
-          <dd>2024</dd>
+          <dd>8 weeks</dd>
         </div>
         <div class="proj-hero__meta-item">
           <dt>Type</dt>
@@ -119,8 +119,13 @@
         <section class="proj-section" id="overview" aria-labelledby="overview-heading">
           <h2 class="proj-section__heading reveal reveal--up" id="overview-heading">Overview</h2>
           <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
-            <p>A focus timer with no countdown. Your session lasts exactly as long as virtual ice takes to melt — shaped by the temperature you choose and the number of cubes you drop into a real-time 3D glass of water.</p>
-            <p>Designed and built end-to-end: Figma UI, Three.js 3D environment, custom physics engine, Web Audio API spatial audio, and a PWA that installs directly from the browser.</p>
+           <p><strong>Project Link:</strong> 
+<a href="https://fatimakazim.github.io/FinalProject/public/" target="_blank">
+https://fatimakazim.github.io/FinalProject/public/
+</a>
+</p>
+            <p>Traditional productivity tools often rely on stressful, ticking countdowns that can induce anxiety rather than focus. To solve this, I created Study Until the Ice Melts, an ambient, 3D focus timer where your session lasts exactly as long as the virtual ice takes to melt. Operating as both a UI/UX Designer and Front-End Developer, I owned this project from end to end. I designed the elegant, dark-mode interface in Figma, and engineered the custom 3D physics, glass refraction, and spatial audio engine entirely from scratch using Vanilla JavaScript and Three.js. The result is a seamless Progressive Web App (PWA) that bypasses the app store to deliver a native, calming, and organic time-management experience directly in the browser</p>
+            <!-- <p>Designed and built end-to-end: Figma UI, Three.js 3D environment, custom physics engine, Web Audio API spatial audio, and a PWA that installs directly from the browser.</p> -->
           </div>
         </section>
 
@@ -225,73 +230,61 @@
         </section>
 
         <!-- SCREENS -->
-         <!-- SCREEN -->
+<!-- SCREENS -->
 <section class="proj-section" id="final" aria-labelledby="final-heading">
   <h2 class="proj-section__heading reveal reveal--up" id="final-heading">
     Screens
   </h2>
 
-  <figure class="proj-figure reveal reveal--up" style="--delay:0.05s">
-    <img
-      src="pictures/ice-screen.png"
-      alt="Study Until the Ice Melts application interface"
-      class="proj-figure__img"
-      loading="lazy"
-      width="1400"
-      height="800"
-    />
-  </figure>
+  <div class="image-grid image-grid--3col reveal reveal--up" style="--delay:0.05s">
+
+    <figure class="image-grid__item">
+      <img src="pictures/ice-frame-1.png"
+        alt="Splash screen"
+        class="image-grid__img image-grid__img--phone"
+        loading="lazy"
+        width="390"
+        height="844"/>
+    </figure>
+
+    <figure class="image-grid__item">
+      <img src="pictures/ice-frame-2.png"
+        alt="Tutorial screen"
+        class="image-grid__img image-grid__img--phone"
+        loading="lazy"
+        width="390"
+        height="844"/>
+    </figure>
+
+    <figure class="image-grid__item">
+      <img src="pictures/ice-frame-3.png"
+        alt="Active session screen"
+        class="image-grid__img image-grid__img--phone"
+        loading="lazy"
+        width="390"
+        height="844"/>
+    </figure>
+
+    <figure class="image-grid__item">
+      <img src="pictures/ice-frame-4.png"
+        alt="Mode selector"
+        class="image-grid__img image-grid__img--phone"
+        loading="lazy"
+        width="390"
+        height="844"/>
+    </figure>
+
+    <figure class="image-grid__item">
+      <img src="pictures/ice-frame-5.png"
+        alt="Audio panel"
+        class="image-grid__img image-grid__img--phone"
+        loading="lazy"
+        width="390"
+        height="844"/>
+    </figure>
+
+  </div>
 </section>
-        <!-- <section class="proj-section" id="final" aria-labelledby="final-heading">
-          <h2 class="proj-section__heading reveal reveal--up" id="final-heading">Screens</h2>
-
-          <div class="final-screens">
-
-            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
-              <h3 class="screen-group__label">Onboarding</h3>
-              <div class="image-grid image-grid--2col">
-                <figure class="image-grid__item">
-                  <img src="pictures/ice-frame-1.png" alt="Splash screen" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
-                  <figcaption class="image-grid__caption">Splash screen</figcaption>
-                </figure>
-                <figure class="image-grid__item">
-                  <img src="pictures/ice-frame-2.png" alt="Mechanics tutorial" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
-                  <figcaption class="image-grid__caption">Mechanics tutorial</figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
-              <h3 class="screen-group__label">Live 3D Environment</h3>
-              <figure class="proj-figure">
-                <img
-                  src="pictures/ice-frame-3.png"
-                  alt="Active session — 3D glass, water, and ice with controls overlay"
-                  class="proj-figure__img"
-                  loading="lazy"
-                  width="1120"
-                  height="700"
-                />
-                <figcaption class="proj-figure__caption">Active session — glass, water, and ice in real time</figcaption>
-              </figure>
-            </div>
-
-            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
-              <h3 class="screen-group__label">Controls &amp; Audio</h3>
-              <div class="image-grid image-grid--2col">
-                <figure class="image-grid__item">
-                  <img src="pictures/ice-frame-4.png" alt="Mode selector and temperature controls" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
-                  <figcaption class="image-grid__caption">Mode &amp; temperature controls</figcaption>
-                </figure>
-                <figure class="image-grid__item">
-                  <img src="pictures/ice-frame-5.png" alt="Ambient audio panel" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
-                  <figcaption class="image-grid__caption">Ambient audio panel</figcaption>
-                </figure>
-              </div>
-            </div>
-
-          </div>
-        </section> -->
 
       </article>
     </div>
