@@ -7,6 +7,7 @@
  *  3. Scroll reveal via IntersectionObserver
  *  4. Smooth scroll for anchor links
  *  5. Project card cursor follow effect
+ *  6. Project card image click → navigates like "Read more"
  * ─────────────────────────────────────────────────────────
  */
 
@@ -463,6 +464,29 @@ function initSectionLabelAnimation() {
 
 
 /* ─────────────────────────────────────────────────────────
+   11. PROJECT CARD — CLICKABLE IMAGE
+   Clicking the card's media area (image/video) navigates
+   to the same destination as the "Read more" CTA link.
+───────────────────────────────────────────────────────── */
+function initCardImageClick() {
+  const cards = qsa('.project-card');
+
+  cards.forEach(card => {
+    const media = qs('.project-card__media', card);
+    const cta   = qs('.project-card__cta', card);
+
+    if (!media || !cta) return;
+
+    media.style.cursor = 'pointer';
+
+    media.addEventListener('click', () => {
+      cta.click();
+    });
+  });
+}
+
+
+/* ─────────────────────────────────────────────────────────
    INIT — Run all modules on DOMContentLoaded
 ───────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -476,4 +500,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initExperienceRows();
   initCustomCursor();
   initSectionLabelAnimation();
+  initCardImageClick();
 });
