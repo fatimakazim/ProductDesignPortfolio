@@ -5,35 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fatima Kazim — Product Designer</title>
   <meta name="description" content="Product designer crafting thoughtful, accessible digital experiences." />
-
-  <!-- Google Fonts: DM Serif Display + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- =====================
-       NAVIGATION
-  ======================== -->
+  <!-- ===================== NAVIGATION ======================== -->
   <nav class="nav" id="nav" aria-label="Main navigation">
-    <div class="nav__inner">
-      <!-- Logo / Name mark -->
-      <a href="#" class="nav__logo" aria-label="Home">Fatima Kazim</a>
-
-      <!-- Desktop nav links -->
+    <div class="nav__pill">
+      <a href="#" class="nav__logo" aria-label="Home">FK</a>
       <ul class="nav__links" role="list">
         <li><a href="#work" class="nav__link">Work</a></li>
         <li><a href="#experience" class="nav__link">Experience</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
-
-      <!-- CTA -->
       <a href="mailto:fk2231@nyu.edu" class="nav__cta">Get in touch</a>
-
-      <!-- Mobile hamburger -->
       <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="nav__hamburger-line"></span>
         <span class="nav__hamburger-line"></span>
@@ -51,177 +39,210 @@
     </ul>
   </div>
 
-  <!-- =====================
-       HERO
-  ======================== -->
+  <!-- ===================== HERO ======================== -->
   <section class="hero" id="hero" aria-label="Introduction">
-    <div class="container">
-      <p class="hero__eyebrow reveal reveal--up">Product Designer</p>
-      <h1 class="hero__headline reveal reveal--up" style="--delay: 0.1s">
-     <h1>
-  Hi! I'm Fatima Kazim, a UI/UX and product designer currently at
-  <a href="#" class="hero__inline-link" target="_blank" rel="noopener">ActiveIX Technologies Inc.</a>,
-  designing user-centered digital products across fintech, logistics, and EdTech. My work combines UX research,
-  interface design, and rapid prototyping to transform complex ideas into intuitive digital experiences.
-</h1>
 
-      <!-- Scroll indicator -->
-      <div class="hero__scroll-indicator reveal reveal--up" style="--delay: 0.3s" aria-hidden="true">
-        <span class="hero__scroll-label">Scroll</span>
-        <span class="hero__scroll-line"></span>
+    <!-- Background blobs -->
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+    </div>
+
+    <div class="hero__inner container">
+
+      <!-- LEFT: Text -->
+      <div class="hero__text reveal reveal--up">
+        <p class="hero__eyebrow">Product Designer</p>
+        <h1 class="hero__headline">
+          Hi, I'm <em>Fatima Kazim</em>
+        </h1>
+        <p class="hero__body">
+          UI/UX and product designer at
+          <a href="#" class="hero__inline-link" target="_blank" rel="noopener">ActiveIX Technologies Inc.</a>
+          Designing user-centered digital products across fintech, logistics, and EdTech — combining UX research, interface design, and rapid prototyping to transform complex ideas into intuitive experiences.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">View Work</a>
+          <a href="mailto:fk2231@nyu.edu" class="btn btn--ghost">Get in touch</a>
+        </div>
       </div>
+
+      <!-- RIGHT: Featured card stack -->
+      <div class="hero__cards" id="hero-cards" aria-hidden="true">
+        <!-- Back cards (decorative) -->
+        <div class="hero__card hero__card--back-2">
+          <div class="hero__card-inner">
+            <span class="hero__card-tag">EdTech · Mobile</span>
+          </div>
+        </div>
+        <div class="hero__card hero__card--back-1">
+          <div class="hero__card-inner">
+            <span class="hero__card-tag">Fintech · UX</span>
+          </div>
+        </div>
+        <!-- Front featured card -->
+        <div class="hero__card hero__card--front">
+          <div class="hero__card-media">
+            <video autoplay muted loop playsinline>
+              <source src="videos/ice-timer-demo.mp4" type="video/mp4">
+            </video>
+            <div class="hero__card-gradient"></div>
+            <div class="hero__card-info">
+              <span class="hero__card-tag">UX · Mobile · App · 2025</span>
+              <p class="hero__card-title">Study Until the Ice Melts</p>
+              <div class="hero__card-actions">
+                <a href="project-ice.html" class="hero__card-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll reveal reveal--up" style="--delay:0.5s" aria-hidden="true">
+      <span class="hero__scroll-label">Scroll</span>
+      <span class="hero__scroll-line"></span>
     </div>
   </section>
 
-  <!-- =====================
-       CASE STUDIES
-  ======================== -->
+  <!-- ===================== CASE STUDIES ======================== -->
   <section class="section work" id="work" aria-labelledby="work-label">
     <div class="container">
-
       <div class="section__header reveal reveal--up">
         <span class="section__label" id="work-label">Case Studies</span>
       </div>
+    </div>
 
-      <!-- Project Cards -->
-      <div class="projects" role="list">
+    <!-- Horizontal Carousel -->
+    <div class="carousel-wrapper">
+      <div class="carousel" id="carousel" role="list">
 
         <!-- Card 1 -->
-        <!-- <article class="project-card reveal reveal--up" role="listitem" style="--delay: 0.05s">
-          <div class="project-card__meta">
-            <span class="project-card__tag">Travel · iOS · AI</span>
-            <span class="project-card__year">2025</span>
-          </div>
-          <h2 class="project-card__title">Designing the Most Intelligent Travel Live Activities</h2>
+        <article class="project-card reveal reveal--up" role="listitem" style="--delay:0.05s" data-href="project-ice.html">
           <div class="project-card__media">
-            <img
-              src="https://placehold.co/960x560/e8e4de/888888?text=Soar+AI+Live+Activities"
-              alt="Soar AI Live Activities project preview"
-              class="project-card__image"
-              loading="lazy"
-              width="960"
-              height="560"
-            />
-            <div class="project-card__overlay" aria-hidden="true"></div>
+            <video class="project-card__video" autoplay muted loop playsinline>
+              <source src="videos/ice-timer-demo.mp4" type="video/mp4">
+            </video>
+            <div class="project-card__overlay"></div>
           </div>
-          <a href="project-ice.html" class="project-card__cta" aria-label="Read case study: Soar AI Live Activities">
-            <span>Read more</span>
-            <svg class="project-card__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </article> -->
-
-        <!-- Card 2 -->
-        <article class="project-card reveal reveal--up" role="listitem" style="--delay: 0.1s">
-          <div class="project-card__meta">
-            <span class="project-card__tag">UX · Mobile · App</span>
-            <span class="project-card__year">2025</span>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__tag">UX · Mobile · App</span>
+              <span class="project-card__year">2025</span>
+            </div>
+            <h2 class="project-card__title">Study Until the Ice Melts — An Ambient 3D Focus Timer App</h2>
+            <a href="project-ice.html" class="project-card__cta" aria-label="Read case study: Ice Timer App">
+              <span>Read more</span>
+              <svg class="project-card__arrow" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
-          <h2 class="project-card__title">Study Until the Ice Melts — An Ambient 3D Focus Timer App</h2>
-          <div class="project-card__media">
-             <video
-      class="project-card__image"
-      width="960"
-      height="560"
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      <source src="videos/ice-timer-demo.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
-   
-            <div class="project-card__overlay" aria-hidden="true"></div>
-          </div>
-          <a href="project-ice.html" class="project-card__cta" aria-label="Read case study: Trip.com Seat Selection">
-            <span>Read more</span>
-            <svg class="project-card__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
         </article>
 
-      <!-- Card 3 -->
-<article class="project-card reveal reveal--up" role="listitem" style="--delay: 0.15s">
+        <!-- Card 2 -->
+        <article class="project-card reveal reveal--up" role="listitem" style="--delay:0.15s" data-href="project-frame.html">
+          <div class="project-card__media">
+            <video class="project-card__video" autoplay muted loop playsinline>
+              <source src="videos/internship-passport-demo.mp4" type="video/mp4">
+            </video>
+            <div class="project-card__overlay"></div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__tag">Internship · Product · Students</span>
+              <span class="project-card__year">2025</span>
+            </div>
+            <h2 class="project-card__title">Simplifying the Search — Internship Passport</h2>
+            <a href="project-frame.html" class="project-card__cta" aria-label="Read case study: Internship Passport">
+              <span>Read more</span>
+              <svg class="project-card__arrow" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
 
-  <div class="project-card__meta">
-    <span class="project-card__tag">Internship · Product · Students</span>
-    <span class="project-card__year">2025</span>
-  </div>
+        <!-- Placeholder card 3 (future project) -->
+        <article class="project-card project-card--placeholder reveal reveal--up" role="listitem" style="--delay:0.25s">
+          <div class="project-card__media project-card__media--empty">
+            <div class="project-card__coming">
+              <span>Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__tag">Fintech · UX · Mobile</span>
+              <span class="project-card__year">2025</span>
+            </div>
+            <h2 class="project-card__title">New Project in Progress</h2>
+          </div>
+        </article>
 
-  <h2 class="project-card__title">
-    Simplifying the search — Internship Passport
-  </h2>
+      </div>
 
-  <div class="project-card__media">
-    <video
-      class="project-card__image"
-      width="960"
-      height="560"
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      <source src="videos/internship-passport-demo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="project-card__overlay" aria-hidden="true"></div>
-  </div>
-
-  <a href="project-frame.html" class="project-card__cta">
-    <span>Read more</span>
-    <svg class="project-card__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5"/>
-    </svg>
-  </a>
-
-</article>
-
-      </div><!-- /.projects -->
+      <!-- Carousel nav -->
+      <div class="carousel-nav" aria-label="Carousel navigation">
+        <button class="carousel-btn carousel-btn--prev" id="carousel-prev" aria-label="Previous project">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Project slides"></div>
+        <button class="carousel-btn carousel-btn--next" id="carousel-next" aria-label="Next project">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M8 5L13 10L8 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
-  <!-- =====================
-       EXPERIENCE
-  ======================== -->
+  <!-- ===================== EXPERIENCE ======================== -->
   <section class="section experience" id="experience" aria-labelledby="experience-label">
-  <div class="container">
+    <div class="container">
 
-    <div class="section__header reveal reveal--up">
-      <span class="section__label" id="experience-label">Experience</span>
+      <div class="section__header reveal reveal--up">
+        <span class="section__label" id="experience-label">Experience</span>
+      </div>
+
+      <div class="experience-list" role="list">
+
+        <div class="experience-row reveal reveal--up" role="listitem" style="--delay:0.05s">
+          <div class="experience-row__num" aria-hidden="true">01</div>
+          <div class="experience-row__content">
+            <div class="experience-row__role">Product Designer</div>
+            <div class="experience-row__company">ActiveIX Technologies Inc., Singapore</div>
+          </div>
+          <div class="experience-row__period">Dec 2025 — Present</div>
+        </div>
+
+        <div class="experience-row reveal reveal--up" role="listitem" style="--delay:0.1s">
+          <div class="experience-row__num" aria-hidden="true">02</div>
+          <div class="experience-row__content">
+            <div class="experience-row__role">Product Design Intern</div>
+            <div class="experience-row__company">FAIshion, California</div>
+          </div>
+          <div class="experience-row__period">Jun 2025 — Sep 2025</div>
+        </div>
+
+        <div class="experience-row reveal reveal--up" role="listitem" style="--delay:0.15s">
+          <div class="experience-row__num" aria-hidden="true">03</div>
+          <div class="experience-row__content">
+            <div class="experience-row__role">UI/UX & Frontend Development Intern</div>
+            <div class="experience-row__company">Enrichly, Abu Dhabi</div>
+          </div>
+          <div class="experience-row__period">May 2025 — Aug 2025</div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="experience-list" role="list">
-
-      <div class="experience-row reveal reveal--up" role="listitem" style="--delay: 0.05s">
-        <div class="experience-row__role">Product Designer</div>
-        <div class="experience-row__company">ActiveIX Technologies Inc., Singapore</div>
-        <div class="experience-row__period">Dec 2025 — Present</div>
-      </div>
-
-      <div class="experience-row reveal reveal--up" role="listitem" style="--delay: 0.1s">
-        <div class="experience-row__role">Product Design Intern</div>
-        <div class="experience-row__company">FAIshion, California</div>
-        <div class="experience-row__period">Jun 2025 — Sep 2025</div>
-      </div>
-
-      <div class="experience-row reveal reveal--up" role="listitem" style="--delay: 0.15s">
-        <div class="experience-row__role">UI/UX & Frontend Development Intern</div>
-        <div class="experience-row__company">Enrichly, Abu Dhabi</div>
-        <div class="experience-row__period">May 2025 — Aug 2025</div>
-      </div>
-
-    </div><!-- /.experience-list -->
-
-  </div>
-</section>
-
-  <!-- =====================
-       CONTACT
-  ======================== -->
+  <!-- ===================== CONTACT ======================== -->
   <section class="section contact" id="contact" aria-labelledby="contact-label">
     <div class="container">
 
@@ -229,65 +250,67 @@
         <span class="section__label" id="contact-label">Contact</span>
       </div>
 
-      <div class="contact-links" role="list">
+      <div class="contact-grid">
 
-        <a href="mailto:fk2231@nyu.edu" class="contact-link reveal reveal--up" style="--delay: 0.05s" role="listitem">
-          <span class="contact-link__icon" aria-hidden="true">
-            <!-- Mail icon -->
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span class="contact-link__label">fk2231@nyu.edu</span>
-          <span class="contact-link__arrow" aria-hidden="true">↗</span>
-        </a>
+        <div class="contact-card reveal reveal--up" style="--delay:0.05s">
+          <p class="contact-card__heading">Let's work together</p>
+          <p class="contact-card__body">Open to freelance, full-time, and collaborative design opportunities.</p>
+        </div>
 
-        <a href="www.linkedin.com/in/fatima-kazim-37a803227" target="_blank" rel="noopener" class="contact-link reveal reveal--up" style="--delay: 0.1s" role="listitem">
-          <span class="contact-link__icon" aria-hidden="true">
-            <!-- LinkedIn icon -->
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="2" y="2" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M6 8.5V14M6 5.5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M10 14v-3a2 2 0 014 0v3M10 8.5V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="contact-link__label">www.linkedin.com/in/fatima-kazim-37a803227</span>
-          <span class="contact-link__arrow" aria-hidden="true">↗</span>
-        </a>
+        <div class="contact-links reveal reveal--up" style="--delay:0.1s" role="list">
 
-        <a href="#" class="contact-link reveal reveal--up" style="--delay: 0.15s" role="listitem">
-          <span class="contact-link__icon" aria-hidden="true">
-            <!-- Resume / doc icon -->
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M5 2h7l4 4v12a1 1 0 01-1 1H5a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 2v4h4M7 9h6M7 12h6M7 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span class="contact-link__label">Resume</span>
-          <span class="contact-link__arrow" aria-hidden="true">↗</span>
-        </a>
+          <a href="mailto:fk2231@nyu.edu" class="contact-link" role="listitem">
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="contact-link__label">fk2231@nyu.edu</span>
+            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
 
-      </div><!-- /.contact-links -->
+          <a href="https://www.linkedin.com/in/fatima-kazim-37a803227" target="_blank" rel="noopener" class="contact-link" role="listitem">
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="2" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6 8.5V14M6 5.5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M10 14v-3a2 2 0 014 0v3M10 8.5V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="contact-link__label">LinkedIn</span>
+            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="#" class="contact-link" role="listitem">
+            <span class="contact-link__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M5 2h7l4 4v12a1 1 0 01-1 1H5a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M12 2v4h4M7 9h6M7 12h6M7 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="contact-link__label">Resume</span>
+            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- =====================
-       FOOTER
-  ======================== -->
+  <!-- ===================== FOOTER ======================== -->
   <footer class="footer" aria-label="Footer">
     <div class="container">
-      <!-- <p class="footer__copy">© 2025 Alex Mercer. Designed with care.</p> -->
+      <p class="footer__name">Fatima Kazim</p>
       <p class="footer__back">
         <a href="#hero" class="footer__top-link" aria-label="Back to top">Back to top ↑</a>
       </p>
     </div>
   </footer>
 
-  <!-- Grain texture overlay (purely decorative) -->
+  <!-- Grain overlay -->
   <div class="grain" aria-hidden="true"></div>
 
   <script src="script.js"></script>
-  <script src="project.js"></script>
 </body>
 </html>
