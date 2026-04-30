@@ -7,6 +7,7 @@
 /* ─────────────────────────────────────────────────────────
    1. DESIGN TOKENS (LIGHT NEUTRAL)
 ───────────────────────────────────────────────────────── */
+
 :root {
   /* Core palette — pale pearl, soft silver, and alabaster */
   --bg-base:        #f0f0f3;

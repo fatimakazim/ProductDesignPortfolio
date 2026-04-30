@@ -8,6 +8,13 @@
 /* ─────────────────────────────────────────────────────────
    1. PROJECT HERO
 ───────────────────────────────────────────────────────── */
+.proj-hero__image {
+  width: 100%;
+  max-width: 900px;   /* control overall size */
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 .proj-hero {
   padding-top: calc(80px + var(--space-16)); /* nav offset + breathing room */
   padding-bottom: var(--space-16);

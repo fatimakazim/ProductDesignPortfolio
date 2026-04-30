@@ -1,0 +1,37 @@
+/* ============================================================
+   EWM4Y PROJECT OVERRIDES — ewm4y.css
+   Extends project.css for this specific case study
+   Keeps global aesthetic intact, only adjusts hero media
+   ============================================================ */
+
+
+/* ─────────────────────────────────────────────────────────
+   1. PROJECT HERO (OVERRIDES)
+───────────────────────────────────────────────────────── */
+
+/* Scope everything to this page only */
+.ewm4y-page .proj-hero__media-row {
+  display: flex !important;   /* force override */
+  flex-direction: row !important;
+  gap: var(--space-6);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Prevent each item from taking full width */
+.ewm4y-page .proj-hero__media-row .proj-hero__image-wrap {
+  flex: 0 0 auto;
+  max-width: 300px;
+}
+
+
+/* Optional: slightly tighter feel for this project */
+.ewm4y-page .proj-hero {
+  padding-bottom: var(--space-12);
+}
+
+
+/* Optional: more subtle hover for video (less “image zoom” feel) */
+.ewm4y-page .proj-hero__image-wrap:hover .proj-hero__image {
+  transform: scale(1.005);
+}

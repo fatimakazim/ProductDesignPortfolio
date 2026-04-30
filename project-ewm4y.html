@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EWM4Y — Designing for Safety · Portfolio</title>
+  <meta name="description" content="A trauma-informed UX case study for immigrant women and youth survivors of violence. Privacy-first design, discreet UI, multilingual access." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="project.css" />
+<link rel="stylesheet" href="ewm4y.css" />
+</head>
+<body>
+  <body class="ewm4y-page"></body>
+
+  <!-- ===================== NAVIGATION ======================== -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="index.html#work" class="mobile-menu__link" data-close-menu>Work</a></li>
+      <li><a href="index.html#experience" class="mobile-menu__link" data-close-menu>Experience</a></li>
+      <li><a href="index.html#contact" class="mobile-menu__link" data-close-menu>Contact</a></li>
+      <li><a href="mailto:fk2231@nyu.edu" class="mobile-menu__link mobile-menu__link--cta" data-close-menu>Get in touch →</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== PROJECT HERO ======================== -->
+  <header class="proj-hero" aria-label="Project introduction">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="proj-breadcrumb reveal reveal--up" aria-label="Breadcrumb">
+        <a href="index.html" class="proj-breadcrumb__link">Work</a>
+        <span class="proj-breadcrumb__sep" aria-hidden="true">→</span>
+        <span class="proj-breadcrumb__current">Enhancing Wellness M4Y</span>
+      </nav>
+
+      <!-- Title -->
+      <h1 class="proj-hero__title reveal reveal--up" style="--delay:0.05s">
+        Designing for Safety — EWM4Y
+      </h1>
+
+      <!-- Meta grid -->
+      <dl class="proj-hero__meta reveal reveal--up" style="--delay:0.1s">
+        <div class="proj-hero__meta-item">
+          <dt>My Role</dt>
+          <dd>UX Designer</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Tools</dt>
+          <dd>Figma, Miro</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Type</dt>
+          <dd>Mobile App · Safety-Critical</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Context</dt>
+          <dd>Trauma-Informed Design</dd>
+        </div>
+      </dl>
+
+<!-- Hero video -->
+<div class="proj-hero__media-row reveal reveal--up" style="--delay:0.15s">
+
+  <figure class="proj-hero__image-wrap">
+    <video class="proj-hero__image" autoplay muted loop playsinline>
+      <source src="videos/ewm4y-hero.mp4" type="video/mp4" />
+    </video>
+  </figure>
+
+  <figure class="proj-hero__image-wrap">
+    <video class="proj-hero__image" autoplay muted loop playsinline>
+      <source src="videos/ewm4y-hero-2.mp4" type="video/mp4" />
+    </video>
+  </figure>
+
+</div>
+
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ======================== -->
+  <main class="proj-body" id="main-content">
+    <div class="container proj-body__container">
+
+      <!-- ── TABLE OF CONTENTS ── -->
+      <aside class="proj-toc" aria-label="Page contents">
+        <nav>
+          <p class="proj-toc__label">Contents</p>
+          <ul class="proj-toc__list" role="list">
+            <li><a href="#overview"      class="proj-toc__link is-active">Overview</a></li>
+            <li><a href="#approach"      class="proj-toc__link">Design Approach</a></li>
+            <li><a href="#users"         class="proj-toc__link">Understanding Users</a></li>
+            <li><a href="#principles"    class="proj-toc__link">Design Principles</a></li>
+            <li><a href="#ia"            class="proj-toc__link">Architecture</a></li>
+            <li><a href="#ideation"      class="proj-toc__link">Ideation</a></li>
+            <li><a href="#wireframes"    class="proj-toc__link">Early Designs</a></li>
+            <li><a href="#iterations"    class="proj-toc__link">Iterations</a></li>
+            <li><a href="#final"         class="proj-toc__link">Final Design</a></li>
+            <li><a href="#reflection"    class="proj-toc__link">Reflection</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ── ARTICLE CONTENT ── -->
+      <article class="proj-article">
+
+        <!-- OVERVIEW -->
+        <section class="proj-section" id="overview" aria-labelledby="overview-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="overview-heading">Overview</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>When we talk about digital product design, we usually frame the problem around conversion, engagement, or onboarding friction. For EWM4Y, the framing is entirely different: if a survivor uses this app and their abuser discovers it, what happens to them?</p>
+            <p>EWM4Y — Enhancing Wellness M4Y — is a platform designed to help immigrant women and youth who are experiencing or recovering from violence. Many of its users are actively monitored: their phones checked, their browsing history inspected, their movements tracked. A poorly designed interface, in this context, is not just frustrating. It can be dangerous.</p>
+            <p>The design challenge wasn't how to make the experience better. It was how to make it invisible when it needed to be, and trustworthy when it wasn't.</p>
+          </div>
+
+          <!-- Summary cards -->
+          <div class="competitor-grid reveal reveal--up" style="--delay:0.1s">
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">The Problem</h3>
+                <p class="competitor-card__desc">Immigrant survivors face compounding barriers: language gaps, distrust of institutions, cultural stigma, and digital surveillance by abusers. Existing resources are out of reach if a survivor can't safely search for them. A digital tool that exposes its user's intent can cause direct harm.</p>
+              </div>
+            </div>
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">The Approach</h3>
+                <p class="competitor-card__desc">A privacy-first, low-cognitive-load interface that prioritizes disguised identity, one-tap exit, multilingual access, and emotionally safe content architecture. Every feature was evaluated not just for usability, but for what it would reveal to a hostile observer.</p>
+              </div>
+            </div>
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">Key Outcomes</h3>
+                <p class="competitor-card__desc">Quick Exit on every screen. Zero personal data stored during safety assessment. AI-assisted risk triage through a calm chat interface. Language selection surfaced at app entry. Visual identity designed to read as a general wellness app.</p>
+              </div>
+            </div>
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">What Made This Different</h3>
+                <p class="competitor-card__desc">This was not a standard mobile UX project. Every design decision carried ethical weight. The users this app serves are vulnerable, often in ongoing danger, and the design had to account for the worst-case scenario at every step.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DESIGN APPROACH -->
+        <section class="proj-section" id="approach" aria-labelledby="approach-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="approach-heading">Design Approach</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>Trauma-informed design is not a checklist of features. It is a way of thinking that asks, at every stage: what is this user carrying when they arrive here, and how does this design respond to that weight?</p>
+            <p>Survivors of violence often experience hypervigilance, difficulty concentrating, distrust of systems, and fragmented cognitive processing. These are not edge cases — they are the baseline state for the people this app was built for. That made standard design heuristics insufficient. "Progressive disclosure" means something different when a user is afraid someone is watching over their shoulder. "Onboarding" means something different when a user may need to exit the screen in under three seconds.</p>
+            <p>Every screen was evaluated against a single question: if an abuser picks up this phone, what does this screen reveal about where the user has been and what they were doing? This became the core lens for all design decisions.</p>
+            <p>The process was deliberately iterative and cautious. Rather than moving quickly through high-fidelity prototypes, the team spent time pressure-testing feature logic — asking whether safety assessment flows could be exploited or misread. Features that created any ambiguity around user intent or privacy were modified or removed. Safety principles weren't added at the end as a feature set. They were the foundation from which every other decision branched.</p>
+          </div>
+        </section>
+
+        <!-- UNDERSTANDING USERS -->
+        <section class="proj-section" id="users" aria-labelledby="users-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="users-heading">Understanding the Users</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The target user base for EWM4Y is specific: immigrant women and youth who are survivors of violence — many of whom are currently in unsafe situations or have recently left them. Understanding this population meant understanding not just their goals, but the conditions under which they pursue those goals.</p>
+          </div>
+
+          <!-- User types -->
+          <div class="principles-grid reveal reveal--up" style="--delay:0.1s">
+            <div class="principle-card">
+              <h3 class="principle-card__title">The Woman in Immediate Danger</h3>
+              <p class="principle-card__desc">She needs to access help fast, without leaving a trace. She may have minutes, not hours. Every additional step is a risk. She cannot afford confusing navigation or an interface that exposes her intent. Speed and invisibility are her primary needs.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">The Cautious Seeker</h3>
+              <p class="principle-card__desc">She is not in immediate danger but is quietly assessing her situation. She distrusts institutions. She needs content that doesn't feel clinical or alarming — something that feels like a private, non-judgmental space. Trust is her primary need.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">The Survivor Rebuilding</h3>
+              <p class="principle-card__desc">She has left her situation and is looking for resources: counseling, legal aid, community. She may have low English proficiency or low digital literacy. Clarity, accessible language, and a calm, empowering tone are her primary needs.</p>
+            </div>
+          </div>
+
+          <!-- Insight list -->
+          <div class="insight-list reveal reveal--up" style="--delay:0.1s">
+            <div class="insight-item">
+              <span class="insight-item__number">01</span>
+              <div>
+                <h4 class="insight-item__title">Discretion Above All</h4>
+                <p class="insight-item__text">The interface must not reveal its purpose to someone who picks up the phone. App identity, screen labels, and navigation language all need to be evaluated through this lens. A feature that works beautifully but exposes its user is a failed feature.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">02</span>
+              <div>
+                <h4 class="insight-item__title">Radical Simplicity</h4>
+                <p class="insight-item__text">Cognitive load from ongoing trauma means a user may not be able to process complex menus, multi-step flows, or unfamiliar terminology. Every element that isn't essential creates friction that can result in abandonment at a critical moment.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">03</span>
+              <div>
+                <h4 class="insight-item__title">Trust Without Credentials</h4>
+                <p class="insight-item__text">Users may distrust apps that ask for account creation, personal information, or location access. Trust must be earned through design signals — not data collection. The Safety Assessment Tool operates with no login and stores nothing.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">04</span>
+              <div>
+                <h4 class="insight-item__title">Language as Access</h4>
+                <p class="insight-item__text">For users with low English proficiency, a monolingual app is no app at all. The language selector must appear at entry — not in settings — because a user who can't read the interface cannot navigate to change it. Language accessibility is not optional; it determines whether the app is usable at all.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DESIGN PRINCIPLES -->
+        <section class="proj-section" id="principles" aria-labelledby="principles-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="principles-heading">Core Design Principles</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>These principles were derived directly from the PRD and applied as consistent design guidelines across every screen and flow. Each one maps directly to a user risk or need — they are not aesthetic preferences, but functional requirements.</p>
+          </div>
+
+          <div class="principles-grid reveal reveal--up" style="--delay:0.1s">
+            <div class="principle-card">
+              <h3 class="principle-card__title">Privacy-First by Default</h3>
+              <p class="principle-card__desc">Safety is not opt-in. Auto-clear sessions, no data storage in the SAT, and disabled password autosave are not features — they are the baseline. The app assumes the worst-case scenario for every session.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">Disguised Interface</h3>
+              <p class="principle-card__desc">The app's visual identity and labeling are designed to read as a general wellness app. Screen content avoids alarming language on initial views, reducing exposure risk if the screen is seen by a hostile observer.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">Low Cognitive Load</h3>
+              <p class="principle-card__desc">Minimal text per screen. Plain language. One primary action per view. The interface never demands complex decision-making in a moment of distress — it removes decisions by making the right path obvious.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">Multilingual Accessibility</h3>
+              <p class="principle-card__desc">Language selection is surfaced at app entry, not in settings. Supported languages include English, Spanish, Farsi, Punjabi, Chinese, Filipino, and Eastern European languages. Content is written in plain language first, then translated.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">Empathy Over Efficiency</h3>
+              <p class="principle-card__desc">The tone is calm, warm, and non-clinical. Labels like "Find Help" replace institutional language. The AI chatbot is designed to feel like a quiet conversation — not a form. The app should feel like support, not a system.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">Fast Exit, Always</h3>
+              <p class="principle-card__desc">A Quick Exit button is visible on every screen. One tap exits the app and redirects to a neutral site, leaving no trace. This is non-negotiable: users must be able to disappear instantly, regardless of where they are in a flow.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- INFORMATION ARCHITECTURE -->
+        <section class="proj-section" id="ia" aria-labelledby="ia-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="ia-heading">Information Architecture</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>Information architecture for EWM4Y could not follow conventional patterns. In most apps, hierarchy is determined by usage frequency, business goals, or research about feature importance. Here, hierarchy was determined by urgency and risk. Features that could protect a user in an immediate crisis were prioritized over features used more often.</p>
+            <p>The bottom navigation has five items. The choice of which five, and in what order, was a safety decision.</p>
+          </div>
+
+          <figure class="proj-figure reveal reveal--up" style="--delay:0.1s">
+            <img
+              src="pictures/ewm4y-ia.png"
+              alt="EWM4Y information architecture diagram showing the five-tab navigation and content hierarchy"
+              class="proj-figure__img"
+              loading="lazy"
+              width="1120"
+              height="560"
+            />
+            <figcaption class="proj-figure__caption">Primary navigation and content hierarchy — each tab was evaluated for safety implications before inclusion</figcaption>
+          </figure>
+
+          <div class="insight-list reveal reveal--up" style="--delay:0.1s">
+            <div class="insight-item">
+              <span class="insight-item__number">Home</span>
+              <div>
+                <h4 class="insight-item__title">Immediate Orientation Toward Help</h4>
+                <p class="insight-item__text">Entry point with live crisis support banner, service search, and category access. The first screen a user sees is oriented toward action — not organizational information about the platform.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">Find</span>
+              <div>
+                <h4 class="insight-item__title">Local Resources Within Reach</h4>
+                <p class="insight-item__text">Local resource locator filtered by proximity and service category. Phone numbers are displayed for copying, not auto-dialing, to avoid creating a call record on the user's device.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">Risk</span>
+              <div>
+                <h4 class="insight-item__title">Anonymous Safety Assessment</h4>
+                <p class="insight-item__text">AI-assisted safety assessment with no login, no data stored, and auto-clear on exit. Accessed through a tab labeled "Risk Tool" — neutral enough to pass a casual glance.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">Safe</span>
+              <div>
+                <h4 class="insight-item__title">Safety Planning, Your Way</h4>
+                <p class="insight-item__text">Modular safety planning checklist with download, print, and trusted-contact share options. Labels are deliberately indirect to avoid identifying the document if it is seen by the wrong person.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">Exit</span>
+              <div>
+                <h4 class="insight-item__title">Always There</h4>
+                <p class="insight-item__text">The Quick Exit occupies one of the five navigation slots — a deliberate trade-off that sacrifices a standard navigation item so that the fastest path to safety is always within thumb reach.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- IDEATION -->
+        <section class="proj-section" id="ideation" aria-labelledby="ideation-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="ideation-heading">Ideation & Feature Structure</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>Ideation for this project required a different creative constraint than most design work. Rather than asking "how do we delight the user," the guiding question was: what does a person in fear actually need, and what form does that take on a screen?</p>
+          </div>
+
+          <div class="competitor-grid reveal reveal--up" style="--delay:0.1s">
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">Safety Assessment Tool</h3>
+                <p class="competitor-card__desc">The most sensitive feature to structure. The challenge: how do you make a user feel safe enough to answer honestly about their situation, while ensuring those answers can never be used against them? The solution: no login, no storage, conversational AI format, auto-clear on exit. The flow ends with a risk level and a direct recommendation — Low, Medium, or High risk — with appropriate resources surfaced immediately.</p>
+              </div>
+            </div>
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">Stay Safe — Safety Planning</h3>
+                <p class="competitor-card__desc">Safety planning is a recognized domestic violence intervention: helping a person think through what to do if their situation escalates. Translating this into a digital interface meant deciding how to label things, how much to explain, and how to ensure the plan itself didn't become evidence. The result: modular checklist, download/print options, share with trusted contact, and deliberately indirect labels throughout.</p>
+              </div>
+            </div>
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">Find Help — Resource Locator</h3>
+                <p class="competitor-card__desc">Designed around two key behaviors: search by proximity (up to 25 miles) and filter by service type. Critically, phone numbers are designed to be copied rather than auto-dialed. Auto-dialing creates a call record; copying allows the user to call from a different device or public phone. This single design decision — copy vs. dial — is the kind of safety-informed detail that a standard UX process might miss entirely.</p>
+              </div>
+            </div>
+            <div class="competitor-card">
+              <div class="competitor-card__body">
+                <h3 class="competitor-card__name">Learn & Grow</h3>
+                <p class="competitor-card__desc">Educational content serving a dual purpose: real information about warning signs, safety planning, and self-care — packaged in a clean, magazine-style layout that reads as a general wellness content hub. This is the app's disguise layer: if someone sees it open on this screen, it looks like a wellness app. For the user who needs it, it is education that can change outcomes.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EARLY DESIGNS / WIREFRAMES -->
+        <section class="proj-section" id="wireframes" aria-labelledby="wireframes-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="wireframes-heading">Early Designs</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The initial design explorations established the core functional structure before safety refinements were fully applied. These screens are instructive — they show what happens when standard mobile UX patterns are applied to a non-standard context.</p>
+          </div>
+
+          <figure class="proj-figure reveal reveal--up" style="--delay:0.1s">
+            <img
+              src="pictures/ewm4y-initial.png"
+              alt="Initial EWM4Y design screens showing early Find Help map view, filter system, RAT risk assessment tool with gauge graphic, and home screen"
+              class="proj-figure__img"
+              loading="lazy"
+              width="1280"
+              height="720"
+            />
+            <figcaption class="proj-figure__caption">Initial design — functional structure established, safety refinements not yet applied</figcaption>
+          </figure>
+
+          <div class="insight-list reveal reveal--up" style="--delay:0.1s">
+            <div class="insight-item">
+              <span class="insight-item__number">01</span>
+              <div>
+                <h4 class="insight-item__title">No Quick Exit</h4>
+                <p class="insight-item__text">The most critical gap in the early design: no persistent exit mechanism. Users relied on standard device navigation. For a monitored user, this wasn't an inconvenience — it was a trap. There was no way to close the app instantly and leave no trace.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">02</span>
+              <div>
+                <h4 class="insight-item__title">Exposed Labels</h4>
+                <p class="insight-item__text">The risk assessment feature was labeled "RAT — Risk Assessment Tool" with a visible gauge graphic. The label itself was identifiable as a crisis resource. For a user in a monitored situation, having this screen visible is as dangerous as leaving a shelter brochure on the table.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">03</span>
+              <div>
+                <h4 class="insight-item__title">Institutional Visual Tone</h4>
+                <p class="insight-item__text">The dark navy navigation, high-contrast cards, and dense information density created a clinical, institutional feel. For a user experiencing trauma, visual tone is not cosmetic — it communicates mood before a word is read. This design communicated urgency when it should have communicated safety.</p>
+              </div>
+            </div>
+            <div class="insight-item">
+              <span class="insight-item__number">04</span>
+              <div>
+                <h4 class="insight-item__title">Static Home Screen</h4>
+                <p class="insight-item__text">The home screen was essentially an "About" page for the organization — introducing the team and mission. A user arriving in distress would have to navigate past this screen to reach any actual tool. Every extra step is a risk and a barrier.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ITERATIONS -->
+        <section class="proj-section" id="iterations" aria-labelledby="iterations-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="iterations-heading">Iterations & Key Improvements</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The following comparisons document the most significant design changes between the initial exploration and the final design. Each change is grounded in a specific user risk or usability problem identified through design review against the PRD's safety principles.</p>
+          </div>
+
+          <!-- Before / After 1 -->
+          <h3 class="proj-section__subheading reveal reveal--up">Quick Exit: From Absent to Always Present</h3>
+          <div class="before-after reveal reveal--up" style="--delay:0.05s">
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-before-1.png"
+                alt="Before: initial home screen with no quick exit mechanism and standard navigation only"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">Before — no persistent exit</figcaption>
+            </figure>
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-after-1.png"
+                alt="After: home screen with persistent green Quick Exit chip in top-right corner on every screen"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">After — Quick Exit on every screen</figcaption>
+            </figure>
+          </div>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>For a monitored user, the absence of a quick exit isn't an inconvenience — it's a trap. The final design treats exit as the most important affordance in the app. A green "Quick Exit" chip persists in the top-right corner of every screen. One tap closes the app, clears session history, and redirects to a neutral site.</p>
+          </div>
+
+          <!-- Before / After 2 -->
+          <h3 class="proj-section__subheading reveal reveal--up">Onboarding: From Identity Exposure to Private Welcome</h3>
+          <div class="before-after reveal reveal--up" style="--delay:0.05s">
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-before-2.png"
+                alt="Before: home screen displaying the full organization name and explicit mission statement about supporting immigrant survivors"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">Before — purpose exposed immediately</figcaption>
+            </figure>
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-after-2.png"
+                alt="After: onboarding slide showing soft illustration and message 'Welcome to EWM4Y — a private space built around you'"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">After — gradual, safe reveal</figcaption>
+            </figure>
+          </div>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The onboarding sequence now serves a dual purpose: it builds trust with the user through calm, reassuring language, while also functioning as the app's disguise. The surface reads as a wellness app. The purpose is revealed gradually, only once a user has already entered a private space.</p>
+          </div>
+
+          <!-- Before / After 3 -->
+          <h3 class="proj-section__subheading reveal reveal--up">Risk Assessment: From Exposed Label to Embedded Conversation</h3>
+          <div class="before-after reveal reveal--up" style="--delay:0.05s">
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-before-3.png"
+                alt="Before: RAT Risk Assessment Tool screen with prominent label and risk gauge graphic"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">Before — label immediately identifiable</figcaption>
+            </figure>
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-after-3.png"
+                alt="After: calm AI chat interface showing a risk counselor conversation, with a discrete risk score shown at the end"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">After — conversational, discreet assessment</figcaption>
+            </figure>
+          </div>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The shift from a form-based assessment to a conversational AI interface also carries a psychological benefit. A chat feels like support. A form feels like documentation. For users who are distrustful of systems, this distinction matters. The tab is now labeled "Risk Tool" — neutral enough to pass a casual glance without revealing the feature's purpose.</p>
+          </div>
+
+          <!-- Before / After 4 -->
+          <h3 class="proj-section__subheading reveal reveal--up">Visual Language: From Clinical to Calm</h3>
+          <div class="before-after reveal reveal--up" style="--delay:0.05s">
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-before-4.png"
+                alt="Before: dark navy navigation bars, high-contrast dense information cards, institutional visual tone"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">Before — institutional, clinical tone</figcaption>
+            </figure>
+            <figure class="before-after__item">
+              <img
+                src="pictures/ewm4y-after-4.png"
+                alt="After: soft lavender palette, generous white space, gentle illustrations, rounded cards"
+                class="before-after__img"
+                loading="lazy"
+                width="540"
+                height="640"
+              />
+              <figcaption class="before-after__label">After — calm, emotionally safe environment</figcaption>
+            </figure>
+          </div>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>Visual tone is not cosmetic in trauma-informed design. Color palette, typography, and spatial density communicate a mood before a word is read. The soft lavender and warm neutral palette with generous white space signals: this is a safe place to be.</p>
+          </div>
+        </section>
+
+        <!-- FINAL DESIGN -->
+        <section class="proj-section" id="final" aria-labelledby="final-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="final-heading">Final Design</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>The final EWM4Y design reads, at a glance, like a calm wellness app. That is entirely intentional. The layered experience reveals itself gradually to users who need it, while presenting a neutral, low-risk surface to anyone else.</p>
+          </div>
+
+          <figure class="proj-figure reveal reveal--up" style="--delay:0.1s">
+            <img
+              src="pictures/ewm4y-final.png"
+              alt="Final EWM4Y design screens: onboarding with language selection, home with crisis banner, services categorized by Emergency and Counseling, Learn and Grow content hub, AI safety assessment, and live chat support"
+              class="proj-figure__img"
+              loading="lazy"
+              width="1280"
+              height="720"
+            />
+            <figcaption class="proj-figure__caption">Final design — the complete experience across onboarding, home, services, assessment, and support</figcaption>
+          </figure>
+
+          <!-- Final screen groups -->
+          <div class="final-screens">
+
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Onboarding — A Private Welcome</h3>
+              <div class="proj-prose">
+                <p>Users are welcomed through a sequence of illustrated slides that introduce the app's purpose gradually: from a private space to a safety tool. Language selection is the final onboarding step — a full-screen prompt with prominent language options. The sequence builds trust before any crisis content appears.</p>
+              </div>
+              <figure class="proj-figure">
+                <img
+                  src="pictures/ewm4y-screen-onboarding.png"
+                  alt="Onboarding sequence showing six illustrated slides and language selection screen"
+                  class="proj-figure__img"
+                  loading="lazy"
+                  width="1280"
+                  height="720"
+                />
+                <figcaption class="proj-figure__caption">Onboarding — purpose revealed gradually; language selected before entering the app</figcaption>
+              </figure>
+            </div>
+
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Home — Always Ready</h3>
+              <div class="proj-prose">
+                <p>The home screen opens with a warm greeting and an immediate service search. A "Crisis Support Live" banner is persistent but non-alarming. Services are organized into All, Emergency, and Counseling tabs for fast navigation. The Quick Exit chip is always visible in the top bar.</p>
+              </div>
+              <figure class="proj-figure">
+                <img
+                  src="pictures/ewm4y-screen-home.png"
+                  alt="Home screen showing Hello how can we help today, crisis support banner, service tabs, and Quick Exit chip"
+                  class="proj-figure__img proj-figure__img--phone-center"
+                  loading="lazy"
+                  width="390"
+                  height="844"
+                />
+                <figcaption class="proj-figure__caption">Home — immediate orientation toward help resources, Quick Exit always accessible</figcaption>
+              </figure>
+            </div>
+
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Safety Assessment — A Conversation, Not a Form</h3>
+              <div class="proj-prose">
+                <p>The AI-assisted Risk Tool opens as a calm chat with a Crisis Counselor persona. Four questions in plain language lead to a risk score and color-coded level. High-risk users see an immediate "Call for help – 911" and "Find a safe place." The design escalates the response, not the user's anxiety. No data is stored.</p>
+              </div>
+              <div class="image-grid image-grid--3col">
+                <!-- <figure class="image-grid__item">
+                  <img src="pictures/ewm4y-screen-rat1.png" alt="AI chat opening with Crisis Counselor greeting and first question" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Chat — warm opening</figcaption>
+                </figure> -->
+                <figure class="image-grid__item">
+                  <img src="pictures/ewm4y-screen-rat2.png" alt="Risk assessment questions four answers showing injury options" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Assessment — plain language</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/ewm4y-screen-rat3.png" alt="Risk result screen showing score of 83 as High Risk with Call for help and Find a safe place options" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Result — immediate next steps</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="screen-group reveal reveal--up" style="--delay:0.05s">
+              <h3 class="screen-group__label">Find Help & Learn — Resources and Disguise</h3>
+              <div class="proj-prose">
+                <p>The resource finder surfaces shelters, counseling centers, and hotlines within a user-selected radius. Contact information uses copy-to-clipboard rather than auto-dial. The Learn section packages safety education in a magazine-style grid — functionally a wellness content hub, exactly as intended.</p>
+              </div>
+              <div class="image-grid image-grid--3col">
+                <figure class="image-grid__item">
+                  <img src="pictures/ewm4y-screen-find.png" alt="Find Help screen with service cards showing shelter, phone, and website options" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Find Help — copy, don't dial</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/ewm4y-screen-learn.png" alt="Learn and Grow screen showing video thumbnail for Creating Your Safety Plan and article cards for Warning Signs and Self-Care Tips" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Learn — education as camouflage</figcaption>
+                </figure>
+                <figure class="image-grid__item">
+                  <img src="pictures/ewm4y-screen-chat.png" alt="Live Chat Support screen with crisis counselor conversation" class="image-grid__img image-grid__img--phone" loading="lazy" width="390" height="844"/>
+                  <figcaption class="image-grid__caption">Live Chat — quiet, real support</figcaption>
+                </figure>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="proj-section" id="reflection" aria-labelledby="reflection-heading">
+          <h2 class="proj-section__heading reveal reveal--up" id="reflection-heading">Reflection</h2>
+          <div class="proj-prose reveal reveal--up" style="--delay:0.05s">
+            <p>Designing EWM4Y was a lesson in what design is actually capable of — and what it is responsible for. Most UX work operates in a comfortable space where a bad decision results in user confusion or a lower conversion metric. Here, a bad decision had consequences that were harder to quantify and impossible to ignore.</p>
+            <p>The hardest challenge wasn't the interface. It was designing for users I couldn't safely research with standard methods. Typical user interviews require trust, openness, and safety — conditions that couldn't always be created with survivors of ongoing violence. Much of the decision-making had to rely on close reading of the PRD, trauma-informed design literature, and responsible inference about user needs. Working with incomplete information while the stakes were this high required a kind of humility that I hadn't had to apply before.</p>
+            <p>With more time and access, I would prioritize community-informed testing in safe environments — working with partner organizations to reach users who could validate assumptions about the disguised interface, the assessment flow, and the exit mechanism. The onboarding language in particular would benefit from multilingual usability testing. What reads as warm and trustworthy in English may carry different connotations in Farsi or Punjabi.</p>
+            <p>What this project changed for me is how I answer the question: who am I designing for, and what do I owe them? In most work, the answer is about understanding the user's goals and reducing friction. Here, the answer was about understanding the user's danger and designing against it. The most important design decision turned out to be knowing when to get out of the user's way — a Quick Exit that always works, a conversation that never stores your words, a screen that looks like something else when it needs to. Design that protects the user even when they're not looking at it.</p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- ===================== PROJECT NAVIGATION ======================== -->
+  <nav class="proj-nav" aria-label="Project navigation">
+    <div class="container">
+      <a href="index.html" class="proj-nav__back reveal reveal--up">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M12 8H4M4 8L8 4M4 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Home
+      </a>
+      <a href="project-ice.html" class="proj-nav__next reveal reveal--up" style="--delay:0.05s">
+        <span>Next Project</span>
+        <strong>Study Until the Ice Melts</strong>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4 8H12M12 8L8 4M12 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===================== FOOTER ======================== -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <p class="footer__back">
+        <a href="#" class="footer__top-link" aria-label="Back to top">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>
