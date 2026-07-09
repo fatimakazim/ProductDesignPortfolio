@@ -526,3 +526,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.classList.add('is-loaded');
 });
+const slides = document.querySelectorAll(".hero-slide");
+
+let currentSlide = 0;
+
+function changeHeroSlide(){
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+
+}
+
+setInterval(changeHeroSlide, 4500);

@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reframing Partition Memories — Project Detail</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="ice.css">
+</head>
+
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+
+<header class="proj-hero container">
+
+<nav class="proj-breadcrumb" aria-label="Breadcrumb">
+<a class="proj-breadcrumb__link" href="index.html">Work</a>
+<span class="proj-breadcrumb__sep">—</span>
+<span class="proj-breadcrumb__current">Reframing Partition Memories</span>
+</nav>
+
+<h1 class="proj-hero__title">
+Reframing Partition Memories
+</h1>
+
+<p class="proj-prose" style="margin-bottom: var(--space-10);">
+A browser-based Virtual Reality experience that reconstructs Saidpur Village
+through WebXR, spatial audio, and oral history to explore how architecture,
+memory, and identity intersect in the aftermath of the 1947 Partition.
+</p>
+
+<dl class="proj-hero__meta">
+
+<div class="proj-hero__meta-item">
+<dt>Role</dt>
+<dd>VR Experience Designer & Developer</dd>
+</div>
+
+<div class="proj-hero__meta-item">
+<dt>Tools</dt>
+<dd>A-Frame · WebXR · Three.js · GLSL · JavaScript · Web Audio API</dd>
+</div>
+
+<div class="proj-hero__meta-item">
+<dt>Type</dt>
+<dd>Immersive WebXR Experience</dd>
+</div>
+
+</dl>
+
+<figure class="proj-hero__image-wrap proj-hero__image-wrap--wide">
+
+<video
+class="proj-hero__image"
+autoplay
+muted
+loop
+playsinline>
+
+<source src="videos/partition-vr.mp4" type="video/mp4">
+
+Your browser does not support the video tag.
+
+</video>
+
+</figure>
+
+</header>
+
+<div class="proj-body container">
+
+<div class="proj-body__container">
+
+<aside class="proj-toc">
+
+<p class="proj-toc__label">
+Contents
+</p>
+
+<nav>
+
+<ul class="proj-toc__list">
+
+<li>
+<a class="proj-toc__link" href="#overview">
+Overview
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#why">
+Why Saidpur Village
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#architecture">
+Experience Architecture
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#narrator">
+Polyhedron Narrator
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#audio">
+Solving WebXR Audio
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#history">
+Oral History
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#stack">
+Technical Stack
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#principles">
+Design Principles
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#reflection">
+Reflection
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#gallery">
+Gallery
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<article class="proj-article">
+
+<section id="overview" class="proj-section">
+
+<h2 class="proj-section__heading">
+Overview
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Reframing Partition Memories is a browser-based Virtual Reality experience
+that reconstructs Saidpur Village, a historically layered settlement on the
+outskirts of Islamabad, as an immersive space for engaging with the human
+stories surrounding the 1947 Partition of India.
+
+</p>
+
+<p>
+
+Instead of presenting history through dates, statistics, or maps, the
+experience explores what Partition feels like when users stand inside the
+spaces where these stories unfolded. By combining architectural
+reconstruction, spatial audio, oral testimony, and immersive media, the
+project transforms physical places into living archives of memory.
+
+</p>
+
+<p>
+
+The project was developed entirely as a custom WebXR application using
+A-Frame and Three.js rather than a conventional 360° tour, allowing users
+to freely explore, interact with guided experiences, and move seamlessly
+between reconstructed environments and real-world locations.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="why" class="proj-section">
+
+<h2 class="proj-section__heading">
+Why Saidpur Village
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Saidpur Village was selected because of its unique historical layers,
+architectural diversity, and ability to preserve traces of communities that
+once lived together before Partition.
+
+</p>
+
+<p>
+
+Unlike generalized historical recreations, grounding the experience within
+a single real location allows visitors to understand history through place
+rather than abstraction. Temples, residential streets, markets, and a
+mosque coexist within walking distance, making the village itself an active
+storyteller.
+
+</p>
+
+</div>
+
+<ul class="feature-list">
+
+<li class="feature-list__item">
+
+<span class="feature-list__label">
+Layered History
+</span>
+
+<span class="feature-list__desc">
+Multiple political and demographic transitions remain visible through the
+village's architecture and urban fabric.
+</span>
+
+</li>
+
+<li class="feature-list__item">
+
+<span class="feature-list__label">
+Architectural Diversity
+</span>
+
+<span class="feature-list__desc">
+Religious, residential, and commercial spaces reveal the multicultural
+character of the village before Partition.
+</span>
+
+</li>
+
+<li class="feature-list__item">
+
+<span class="feature-list__label">
+Memory Through Place
+</span>
+
+<span class="feature-list__desc">
+Visitors experience history by moving through reconstructed spaces rather
+than reading a chronological narrative.
+</span>
+
+</li>
+
+</ul>
+
+</section>
+<!-- ===========================================================
+EXPERIENCE ARCHITECTURE
+=========================================================== -->
+
+<section id="architecture" class="proj-section">
+
+<h2 class="proj-section__heading">
+Experience Architecture
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Rather than functioning as a traditional VR tour, the experience is
+structured as three interconnected layers. Each offers a different way of
+understanding the same physical location, allowing users to move fluidly
+between historical reconstruction, documentary media, and personal
+testimony.
+
+</p>
+
+</div>
+
+<h3 class="proj-section__subheading">
+1. Cinematic Threshold
+</h3>
+
+<div class="proj-prose">
+
+<p>
+
+The experience opens with a holographic cinematic sequence introducing the
+historical context before users gain full control. The introduction can be
+skipped at any point, ensuring experienced users aren't forced through
+lengthy exposition while still providing newcomers with meaningful context.
+
+</p>
+
+</div>
+
+<h3 class="proj-section__subheading">
+<h3 class="proj-section__subheading">
+2. Interactive Architectural Reconstruction
+</h3>
+
+<figure class="proj-banner">
+    <img
+        src="pictures/architectural-model.jpg"
+       
+        loading="lazy"
+    >
+    <figcaption>
+        The interactive 3D reconstruction of Saidpur Village used throughout the experience.
+    </figcaption>
+</figure>
+
+<div class="proj-prose">
+
+<p>
+
+At the heart of the experience lies a detailed reconstruction of Saidpur
+Village created as a GLTF environment. Users may freely explore using
+desktop controls or VR locomotion, or choose to follow a guided experience
+that leads them through ten historically significant locations.
+
+</p>
+
+<p>
+
+Each stop contains interactive hotspots connecting the reconstructed model
+to oral testimony, archival information, and immersive 360° media captured
+from the real site.
+
+</p>
+
+</div>
+
+<h3 class="proj-section__subheading">
+3. Immersive 360° Experiences
+</h3>
+
+<div class="proj-prose">
+
+<p>
+
+Selecting a hotspot transports visitors directly into panoramic photo and
+video captures of the actual location. These documentary spaces are layered
+with spatial audio recordings collected from local residents, allowing users
+to hear stories precisely where they occurred before returning seamlessly to
+the reconstructed environment.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================================================
+POLYHEDRON
+=========================================================== -->
+
+<section id="narrator" class="proj-section">
+
+<h2 class="proj-section__heading">
+The Polyhedron Narrator
+</h2>
+
+<figure class="proj-banner">
+    <img
+        src="pictures/polyhedron-narrator.jpg"
+        alt="The holographic polyhedron narrator guiding users through Saidpur Village"
+        loading="lazy"
+    >
+</figure>
+
+<div class="proj-prose">
+
+<p>
+
+One of the project's defining features is a custom-designed holographic
+polyhedron that serves as the experience's guide. Rather than using a human
+avatar, the narrator appears as an abstract geometric object inspired by
+Dürer's <em>Melencolia I</em>, emphasizing that no single individual owns
+the collective memories being shared.
+
+</p>
+
+<p>
+
+The polyhedron functions as a living vessel for oral testimony. It guides
+users throughout the experience while visually responding to their movement,
+creating a subtle emotional connection without relying on human
+representation.
+
+</p>
+
+</div>
+
+<ul class="feature-list">
+
+<li class="feature-list__item">
+
+<span class="feature-list__label">
+State Machine
+</span>
+
+<span class="feature-list__desc">
+
+A fully custom behavioural system governs every interaction using states for
+movement, waiting, narration, arrival, and completion.
+
+</span>
+
+</li>
+
+<li class="feature-list__item">
+
+<span class="feature-list__label">
+Reactive Behaviour
+</span>
+
+<span class="feature-list__desc">
+
+Glow intensity, particle density, and rotational movement dynamically adjust
+based on the user's proximity.
+
+</span>
+
+</li>
+
+<li class="feature-list__item">
+
+<span class="feature-list__label">
+Custom GLSL Shaders
+</span>
+
+<span class="feature-list__desc">
+
+The holographic appearance was created entirely with handwritten GLSL
+vertex and fragment shaders layered with particle systems and orbital rings.
+
+</span>
+
+</li>
+
+<li class="feature-list__item">
+
+<span class="feature-list__label">
+Guided Navigation
+</span>
+
+<span class="feature-list__desc">
+
+Smooth interpolation allows the narrator to travel naturally between ten
+historically significant locations across the reconstructed village.
+
+</span>
+
+</li>
+
+</ul>
+
+</section>
+
+<!-- ===========================================================
+WEBXR AUDIO
+=========================================================== -->
+
+<section id="audio" class="proj-section">
+
+<h2 class="proj-section__heading">
+Technical Challenge — Solving WebXR Audio
+</h2>
+
+<ul class="finding-list">
+
+<li class="finding-item">
+
+<div class="finding-item__header">
+
+<span class="finding-item__number">
+01
+</span>
+
+<h3 class="finding-item__title">
+Browser Audio Restrictions
+</h3>
+
+</div>
+
+<p class="finding-item__problem">
+
+<strong>Problem:</strong>
+
+During active WebXR sessions, browsers frequently block playback from
+HTMLAudioElement even after a user has already interacted with the page.
+This causes narrated VR experiences to silently fail once a headset session
+begins.
+
+</p>
+
+<p class="finding-item__solution">
+
+<strong>Solution:</strong>
+
+I engineered a custom NarrationAudioManager using the Web Audio API.
+Narration clips are preloaded into AudioBuffers, cached, and played through
+AudioBufferSourceNodes connected to a unified audio pipeline. After a single
+user gesture unlocks the AudioContext, narration continues reliably
+throughout the VR experience without interruption.
+
+</p>
+
+</li>
+
+</ul>
+
+</section>
+
+<!-- ===========================================================
+ORAL HISTORY
+=========================================================== -->
+
+<section id="history" class="proj-section">
+
+<h2 class="proj-section__heading">
+Oral History as Spatial Content
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+The project combines oral history with physical geography by attaching every
+testimony to the exact location where it occurred. Rather than reading a
+linear transcript, visitors encounter memories naturally as they move
+through the village.
+
+</p>
+
+<p>
+
+Stories describe neighbourhoods, courtyards, markets, friendships, and
+daily routines rather than abstract political events. This transforms the
+village into a spatial archive where architecture itself becomes part of the
+storytelling process.
+
+</p>
+
+<p>
+
+By anchoring every narrative fragment to real coordinates, memory accumulates
+through movement rather than scrolling text, encouraging exploration instead
+of passive observation.
+
+</p>
+
+</div>
+
+</section>
+<!-- ===========================================================
+TECHNICAL STACK
+=========================================================== -->
+
+<section id="stack" class="proj-section">
+
+<h2 class="proj-section__heading">
+Technical Stack
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+The project was developed entirely for the browser using modern WebXR
+technologies, enabling users to experience the work on desktop computers,
+mobile devices, or VR headsets without installing a native application.
+
+</p>
+
+</div>
+
+<ul class="feature-list">
+
+<li class="feature-list__item">
+<span class="feature-list__label">Engine</span>
+<span class="feature-list__desc">
+A-Frame 1.4.2 built on top of Three.js and WebXR.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">3D Environment</span>
+<span class="feature-list__desc">
+Custom GLTF reconstruction of Saidpur Village optimized for real-time
+browser rendering.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">360° Media</span>
+<span class="feature-list__desc">
+Panoramic photo and video environments with cross-platform playback support.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Narrator System</span>
+<span class="feature-list__desc">
+Custom A-Frame component featuring handwritten GLSL shaders and procedural
+animation.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Audio</span>
+<span class="feature-list__desc">
+Web Audio API with AudioBuffer caching for uninterrupted narration inside
+WebXR sessions.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Interaction</span>
+<span class="feature-list__desc">
+Raycaster-based hotspot system with VR controller support and desktop
+fallback controls.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Programming</span>
+<span class="feature-list__desc">
+Vanilla JavaScript, HTML5, CSS3, custom A-Frame components, and GLSL shaders.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Deployment</span>
+<span class="feature-list__desc">
+Single-page WebXR application running entirely inside the browser with no
+framework dependency.
+</span>
+</li>
+
+</ul>
+
+</section>
+
+<!-- ===========================================================
+DESIGN PRINCIPLES
+=========================================================== -->
+
+<section id="principles" class="proj-section">
+
+<h2 class="proj-section__heading">
+Design Principles
+</h2>
+
+<ul class="insight-list">
+
+<li class="insight-item">
+
+<span class="insight-item__number">
+01
+</span>
+
+<div>
+
+<p class="insight-item__title">
+Memory is Spatial.
+</p>
+
+<p class="insight-item__text">
+
+Stories become more meaningful when attached to physical locations rather
+than presented as disconnected historical facts.
+
+</p>
+
+</div>
+
+</li>
+
+<li class="insight-item">
+
+<span class="insight-item__number">
+02
+</span>
+
+<div>
+
+<p class="insight-item__title">
+Technology Should Support the Story.
+</p>
+
+<p class="insight-item__text">
+
+Every technical decision—from shaders to locomotion—was designed to
+strengthen immersion without distracting from the historical narrative.
+
+</p>
+
+</div>
+
+</li>
+
+<li class="insight-item">
+
+<span class="insight-item__number">
+03
+</span>
+
+<div>
+
+<p class="insight-item__title">
+Accessibility Matters.
+</p>
+
+<p class="insight-item__text">
+
+The experience gracefully scales from desktop browsers to fully immersive VR
+headsets so the project remains accessible regardless of hardware ownership.
+
+</p>
+
+</div>
+
+</li>
+
+<li class="insight-item">
+
+<span class="insight-item__number">
+04
+</span>
+
+<div>
+
+<p class="insight-item__title">
+Multiple Perspectives.
+</p>
+
+<p class="insight-item__text">
+
+The same place is presented simultaneously as architecture, documentary
+media, and personal testimony, encouraging users to construct their own
+understanding of history.
+
+</p>
+
+</div>
+
+</li>
+
+<li class="insight-item">
+
+<span class="insight-item__number">
+05
+</span>
+
+<div>
+
+<p class="insight-item__title">
+Immersion Should Never Become Friction.
+</p>
+
+<p class="insight-item__text">
+
+Every onboarding step, cinematic, and guided interaction can be skipped,
+allowing visitors to remain in control of their own experience.
+
+</p>
+
+</div>
+
+</li>
+
+</ul>
+
+</section>
+
+<!-- ===========================================================
+ROLE
+=========================================================== -->
+<section id="role" class="proj-section">
+
+<h2 class="proj-section__heading">
+Role & Contribution
+</h2>
+
+<figure class="proj-banner">
+    <img
+        src="pictures/role-contribution.jpg"
+        alt="Development process showing the creation of the VR experience"
+        loading="lazy"
+    >
+</figure>
+
+<div class="proj-prose">
+
+<p>
+
+I independently designed and developed the entire experience, including the
+scene architecture, interaction systems, guided tour framework, custom
+polyhedron narrator, shader development, WebXR audio pipeline, UI, spatial
+interaction design, and integration of oral testimonies into the virtual
+environment.
+
+</p>
+
+<p>
+
+The project required balancing immersive experience design, front-end
+engineering, historical research, UX design, and technical problem solving
+to create a cohesive interactive narrative.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================================================
+REFLECTION
+=========================================================== -->
+
+<section id="reflection" class="proj-section">
+
+<h2 class="proj-section__heading">
+Reflection
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+This project challenged me to think about virtual reality not simply as a
+visual medium, but as a way of communicating memory through space.
+Developing the experience reinforced how interaction design, storytelling,
+and software engineering can work together to make history feel immediate
+rather than distant.
+
+</p>
+
+<p>
+
+More importantly, it demonstrated that immersive technology can preserve
+local histories in ways that traditional media cannot. By allowing users to
+walk through reconstructed environments while listening to personal
+testimonies, architecture itself becomes part of the storytelling process.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================================================
+GALLERY
+=========================================================== -->
+
+<section id="gallery" class="proj-section">
+
+<h2 class="proj-section__heading">
+Gallery
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Additional screenshots and videos from the WebXR experience.
+
+</p>
+
+</div>
+
+<div class="image-grid image-grid--3col">
+
+<div class="image-grid__item">
+<img class="image-grid__img"
+src="pictures/partition01.jpg"
+
+loading="lazy">
+<p class="image-grid__caption"></p>
+</div>
+
+<div class="image-grid__item">
+<img class="image-grid__img"
+src="pictures/partition02.jpg"
+
+loading="lazy">
+<p class="image-grid__caption"></p>
+</div>
+
+<div class="image-grid__item">
+<img class="image-grid__img"
+src="pictures/partition03.jpg"
+
+loading="lazy">
+<p class="image-grid__caption"></p>
+</div>
+
+<div class="image-grid__item">
+<img class="image-grid__img"
+src="pictures/partition04.jpg"
+
+loading="lazy">
+<p class="image-grid__caption"></p>
+</div>
+
+<div class="image-grid__item">
+<img class="image-grid__img"
+src="pictures/partition05.jpg"
+
+loading="lazy">
+<p class="image-grid__caption"></p>
+</div>
+
+<div class="image-grid__item">
+<img class="image-grid__img"
+src="pictures/partition06.jpg"
+
+loading="lazy">
+<p class="image-grid__caption"></p>
+</div>
+
+</div>
+
+</section>
+
+</article>
+
+</div>
+</div>
+
+<nav class="proj-nav" aria-label="Project navigation">
+
+<div class="container">
+
+<a class="proj-nav__back" href="index.html">
+
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+
+<path d="M10 3L5 8L10 13"
+stroke="currentColor"
+stroke-width="1.5"
+stroke-linecap="round"
+stroke-linejoin="round"/>
+
+</svg>
+
+All Projects
+
+</a>
+
+<a class="proj-nav__next" href="3Dpage.html">
+
+<span>
+Next Project
+</span>
+
+<strong>
+3D Modeling & Industrial Design Works
+</strong>
+
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+
+<path d="M6 3L11 8L6 13"
+stroke="currentColor"
+stroke-width="1.5"
+stroke-linecap="round"
+stroke-linejoin="round"/>
+
+</svg>
+
+</a>
+
+</div>
+
+</nav>
+
+<script>
+
+const bar = document.getElementById("readingProgress");
+
+window.addEventListener("scroll", () => {
+
+const scrollTop = window.scrollY;
+const docHeight =
+document.documentElement.scrollHeight - window.innerHeight;
+
+bar.style.width =
+(scrollTop / docHeight) * 100 + "%";
+
+});
+
+const sections =
+document.querySelectorAll(".proj-section");
+
+const links =
+document.querySelectorAll(".proj-toc__link");
+
+const observer =
+new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if (entry.isIntersecting) {
+
+links.forEach(link =>
+link.classList.remove("is-active")
+);
+
+const active =
+document.querySelector(
+`.proj-toc__link[href="#${entry.target.id}"]`
+);
+
+if (active)
+active.classList.add("is-active");
+
+}
+
+});
+
+},{
+rootMargin:"-20% 0px -70% 0px"
+});
+
+sections.forEach(section =>
+observer.observe(section)
+);
+
+</script>
+
+</body>
+</html>

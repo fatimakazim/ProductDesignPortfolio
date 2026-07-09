@@ -10,10 +10,10 @@
 ───────────────────────────────────────────────────────── */
 .proj-hero__image {
   width: 100%;
-  max-width: 900px;   /* control overall size */
-  height: auto;
-  object-fit: cover;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  border-radius: inherit;
 }
 .proj-hero {
   padding-top: calc(80px + var(--space-16)); /* nav offset + breathing room */
@@ -892,4 +892,21 @@
   background-color: var(--color-text);
   z-index: 1000;
   transition: width 0.1s linear;
+}
+
+.proj-banner {
+    margin: 1.5rem 0 2rem;
+}
+
+.proj-banner img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+}
+
+.proj-banner figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    text-align: center;
 }

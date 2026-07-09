@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wild Quest — Project Detail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="ice.css" />
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <header class="proj-hero container">
+
+    <nav class="proj-breadcrumb" aria-label="Breadcrumb">
+      <a class="proj-breadcrumb__link" href="index.html">Work</a>
+      <span class="proj-breadcrumb__sep">—</span>
+      <span class="proj-breadcrumb__current">Wild Quest</span>
+    </nav>
+
+    <h1 class="proj-hero__title">Wild Quest</h1>
+
+    <p class="proj-prose" style="margin-bottom: var(--space-10);">
+      A 3D side-scrolling adventure game built entirely in Unity — from character controller and physics systems to level design, UI/UX, and audio integration — by a single developer.
+    </p>
+
+    <!-- Meta grid: project.css expects dl > .proj-hero__meta-item > dt + dd -->
+    <dl class="proj-hero__meta">
+      <div class="proj-hero__meta-item">
+        <dt>Role</dt>
+        <dd>Game Designer &amp; Developer</dd>
+      </div>
+      
+      <div class="proj-hero__meta-item">
+        <dt>Tools</dt>
+        <dd>Unity · C# · Blender</dd>
+      </div>
+      <div class="proj-hero__meta-item">
+        <dt>Type</dt>
+        <dd>3D Adventure Game</dd>
+      </div>
+    </dl>
+
+<!-- Hero video -->
+<figure class="proj-hero__image-wrap proj-hero__image-wrap--wide">
+  <video
+    class="proj-hero__image"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source src="videos/WildQuestVideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
+
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       BODY — TOC + ARTICLE
+  ════════════════════════════════════════ -->
+  <div class="proj-body container">
+    <div class="proj-body__container">
+
+      <!-- Sticky Table of Contents -->
+      <aside class="proj-toc" aria-label="Page sections">
+        <p class="proj-toc__label">Contents</p>
+        <nav>
+          <ul class="proj-toc__list">
+            <li><a class="proj-toc__link" href="#overview">Overview</a></li>
+           
+            <li><a class="proj-toc__link" href="#process">Process</a></li>
+            <li><a class="proj-toc__link" href="#features">Features</a></li>
+            <li><a class="proj-toc__link" href="#challenges">Challenges</a></li>
+            <li><a class="proj-toc__link" href="#skills">Skills</a></li>
+            <li><a class="proj-toc__link" href="#takeaways">Takeaways</a></li>
+            <li><a class="proj-toc__link" href="#gallery">Gallery</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main article -->
+      <article class="proj-article">
+
+        <!-- ─── 1. Overview ───────────────── -->
+        <section id="overview" class="proj-section">
+          <h2 class="proj-section__heading">Overview</h2>
+          <div class="proj-prose">
+            <p>
+              Wild Quest is a 3D side-scrolling platformer developed independently in Unity. The game follows a warrior who must escape captivity and find his way home — a journey told through escalating levels, each raising the environmental complexity and mechanical demand on the player.
+            </p>
+            <p>
+              Inspired by the tight controls of <em>Super Mario</em> and the rhythm-based platforming of <em>Rayman Legends</em>, Wild Quest prioritises responsive movement, readable level layouts, and a sense of momentum that rewards skilled play. The project was designed and shipped end-to-end by a single developer, covering every discipline from systems programming and physics tuning to UI design and audio integration.
+            </p>
+          </div>
+        </section>
+
+        <!-- ─── 3. Development Process ─────── -->
+        <section id="process" class="proj-section">
+          <h2 class="proj-section__heading">Development Process</h2>
+
+          <h3 class="proj-section__subheading">Game Design</h3>
+          <div class="proj-prose">
+            <p>
+              Development began with a design document that defined the player fantasy ("escape and return"), core verbs (run, jump, dodge, progress), and a difficulty curve spread across five levels. Mechanic introductions were staggered so each level taught one new concept before the next layered on complexity — a structure borrowed from established game design pedagogy and adapted to the project's short runtime.
+            </p>
+          </div>
+
+          <h3 class="proj-section__subheading">Environment &amp; Level Design</h3>
+          <div class="proj-prose">
+            <p>
+              Each environment was blocked out in Unity's scene editor before any assets were committed, allowing rapid iteration on spatial flow and obstacle pacing. Environmental storytelling guided the art direction: early levels use confined, industrial geometry to reinforce the captivity narrative, while later levels open into wider, naturalistic spaces that mirror the protagonist's growing freedom. Blender was used to produce custom environmental meshes where Unity's primitive geometry was insufficient.
+            </p>
+          </div>
+
+          <h3 class="proj-section__subheading">Programming &amp; Systems</h3>
+          <div class="proj-prose">
+            <p>
+              All gameplay logic was written in C# using Unity's MonoBehaviour and component architecture. The character controller was built from scratch on top of Unity's Physics System rather than the built-in Character Controller component, enabling precise tuning of jump arc, air control, and ground-detection behaviour. A state-machine pattern governed player states (idle, running, jumping, falling, dead), keeping logic modular and debuggable. A lightweight scene-management system handled level loading, checkpoint persistence, and win/lose state transitions.
+            </p>
+          </div>
+
+          <h3 class="proj-section__subheading">UI/UX Design</h3>
+          <div class="proj-prose">
+            <p>
+              The HUD was designed for minimal cognitive overhead — health, progress, and collectible counts are surfaced through iconographic elements rather than dense text. Menus were built with Unity UI Toolkit, applying a consistent visual language across the main menu, pause screen, and level-complete flow. Transitions between UI states use short easing animations to preserve spatial context and reduce disorientation.
+            </p>
+          </div>
+        </section>
+
+        <!-- ─── 4. Key Features ───────────── -->
+        <section id="features" class="proj-section">
+          <h2 class="proj-section__heading">Key Features</h2>
+
+          <!-- project.css: .feature-list > .feature-list__item > .feature-list__label + .feature-list__desc -->
+          <ul class="feature-list">
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Custom Character Controller</span>
+              <span class="feature-list__desc">Rigidbody-based movement system with tuned gravity multipliers, coyote-time, and jump-buffering for a responsive, forgiving feel.</span>
+            </li>
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Multi-Level Progression</span>
+              <span class="feature-list__desc">Five hand-crafted levels with distinct environments, staged mechanic introductions, and an escalating difficulty curve.</span>
+            </li>
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Obstacle &amp; Hazard Systems</span>
+              <span class="feature-list__desc">Modular hazard components — moving platforms, triggered traps, and environmental obstacles — built to be reusable and configurable per level.</span>
+            </li>
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Checkpoint &amp; State Persistence</span>
+              <span class="feature-list__desc">Mid-level checkpoints preserve player progress across deaths; a scene-management system handles transitions cleanly without data loss.</span>
+            </li>
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Polished UI/UX</span>
+              <span class="feature-list__desc">Full HUD, main menu, pause screen, and level-complete flow built in Unity UI Toolkit with smooth animated transitions.</span>
+            </li>
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Animation Integration</span>
+              <span class="feature-list__desc">Animator Controller with blend trees for locomotion states and trigger-based transitions for combat and interaction animations.</span>
+            </li>
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Spatial Audio</span>
+              <span class="feature-list__desc">Positional audio cues for environment and character feedback, with background music managed through a persistent AudioManager singleton.</span>
+            </li>
+
+            <li class="feature-list__item">
+              <span class="feature-list__label">Environmental Storytelling</span>
+              <span class="feature-list__desc">Level art and geometry crafted to reinforce the escape narrative — environment design and game design working in unison.</span>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- ─── 5. Technical Challenges ────── -->
+        <section id="challenges" class="proj-section">
+          <h2 class="proj-section__heading">Technical Challenges &amp; Solutions</h2>
+
+          <!-- project.css: .finding-list > .finding-item > .finding-item__header + .finding-item__problem/.finding-item__solution -->
+          <ul class="finding-list">
+
+            <li class="finding-item">
+              <div class="finding-item__header">
+                <span class="finding-item__number">01</span>
+                <h3 class="finding-item__title">Character Movement That Feels Good</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Unity's default Character Controller produced floaty jumps and imprecise landing detection that undermined player trust in the controls.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> Replaced it with a custom Rigidbody solution — adding a gravity multiplier that increases once the apex is passed, coyote-time to forgive late jumps off ledge edges, and a jump buffer that queues input for a few frames before landing. The result is movement that feels intentional and tight without being punishing.</p>
+            </li>
+
+            <li class="finding-item">
+              <div class="finding-item__header">
+                <span class="finding-item__number">02</span>
+                <h3 class="finding-item__title">Reliable Collision Detection at Speed</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Fast-moving hazards and the player's sprint state caused tunnelling artefacts where physics objects passed through thin geometry.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> Switched the player's Rigidbody to Continuous Collision Detection and configured collision layer matrices to reduce unnecessary broad-phase checks — resolving the tunnelling while keeping physics overhead manageable.</p>
+            </li>
+
+            <li class="finding-item">
+              <div class="finding-item__header">
+                <span class="finding-item__number">03</span>
+                <h3 class="finding-item__title">Difficulty Curve Calibration</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Playtesting exposed uneven difficulty spikes — Level 3 was significantly harder than the levels around it.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> Introduced a per-level design audit checklist tracking obstacle density, required jump precision, and enemy count per minute. Used those metrics to redistribute challenge more consistently across the full progression arc.</p>
+            </li>
+
+            <li class="finding-item">
+              <div class="finding-item__header">
+                <span class="finding-item__number">04</span>
+                <h3 class="finding-item__title">Level Progression &amp; Scene Management</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Managing state across scene loads — preserving checkpoint data and carrying score through transitions — proved fragile with per-scene objects.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> A persistent GameManager singleton using <code>DontDestroyOnLoad</code>, combined with a ScriptableObject-based data layer for player state, produced a clean separation between transient scene data and persistent session data.</p>
+            </li>
+
+            <li class="finding-item">
+              <div class="finding-item__header">
+                <span class="finding-item__number">05</span>
+                <h3 class="finding-item__title">Animation State Conflicts</h3>
+              </div>
+              <p class="finding-item__problem"><strong>Problem:</strong> Blend tree transitions between idle, run, and jump states produced visual glitches when inputs changed faster than transitions could complete.</p>
+              <p class="finding-item__solution"><strong>Solution:</strong> Restructured the Animator Controller to use sub-state machines with explicit exit conditions, and added input debouncing in the controller script — eliminating the artefacts entirely.</p>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- ─── 6. Skills Demonstrated ─────── -->
+        <section id="skills" class="proj-section">
+          <h2 class="proj-section__heading">Skills Demonstrated</h2>
+
+          <h3 class="proj-section__subheading">Technical</h3>
+          <div class="proj-prose">
+            <ul>
+              <li>C# programming — state machines, singletons, ScriptableObjects, component architecture</li>
+              <li>Unity Physics System — Rigidbody dynamics, collision layers, CCD configuration</li>
+              <li>Unity Animation System — Animator Controller, blend trees, sub-state machines</li>
+              <li>Unity UI Toolkit — layout authoring, event binding, transition animation</li>
+              <li>Scene management — additive loading, persistent managers, session state</li>
+              <li>Audio integration — positional audio, AudioManager singleton, music looping</li>
+              <li>3D asset pipeline — Blender modelling, Unity import, material setup</li>
+              <li>Debugging &amp; profiling — Unity Profiler, Physics Debugger, systematic playtesting</li>
+            </ul>
+          </div>
+
+          <h3 class="proj-section__subheading">Design</h3>
+          <div class="proj-prose">
+            <ul>
+              <li>Game design documentation — mechanic definitions, difficulty curves, player flow</li>
+              <li>Level design — blockout-first workflow, spatial pacing, environmental storytelling</li>
+              <li>UX design — HUD information hierarchy, menu flow, transition design</li>
+              <li>Playtesting methodology — structured test sessions, data-driven iteration</li>
+              <li>Solo end-to-end production — scoping, prioritisation, and delivery without a team</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ─── 7. Key Takeaways ──────────── -->
+        <section id="takeaways" class="proj-section">
+          <h2 class="proj-section__heading">Key Takeaways</h2>
+
+          <!-- project.css: .insight-list > .insight-item > .insight-item__number + div > .insight-item__title + .insight-item__text -->
+          <ul class="insight-list">
+
+            <li class="insight-item">
+              <span class="insight-item__number">01</span>
+              <div>
+                <p class="insight-item__title">Feel before features.</p>
+                <p class="insight-item__text">The single highest-leverage investment was the character controller. Time spent on jump arc, gravity tuning, and input forgiveness — before any content was built — meant every subsequent design decision sat on a responsive foundation. Game feel is infrastructure.</p>
+              </div>
+            </li>
+
+            <li class="insight-item">
+              <span class="insight-item__number">02</span>
+              <div>
+                <p class="insight-item__title">Architecture decisions compound.</p>
+                <p class="insight-item__text">Choosing a ScriptableObject-based state layer early prevented cascading bugs during level transitions. Clean data boundaries save disproportionate time in later stages of development.</p>
+              </div>
+            </li>
+
+            <li class="insight-item">
+              <span class="insight-item__number">03</span>
+              <div>
+                <p class="insight-item__title">Playtesting exposes what design docs cannot.</p>
+                <p class="insight-item__text">The difficulty spike in Level 3 was invisible on paper and obvious after one external playtest. Building structured test checkpoints into the schedule — not treating testing as a final-phase activity — is the difference between a designed difficulty curve and an accidental one.</p>
+              </div>
+            </li>
+
+            <li class="insight-item">
+              <span class="insight-item__number">04</span>
+              <div>
+                <p class="insight-item__title">Constraint sharpens scope.</p>
+                <p class="insight-item__text">Developing solo forced rigorous prioritisation. Features that could not be justified against the core loop were cut early, which kept the project finishable and the shipped experience coherent.</p>
+              </div>
+            </li>
+
+            <li class="insight-item">
+              <span class="insight-item__number">05</span>
+              <div>
+                <p class="insight-item__title">Design and engineering are the same conversation.</p>
+                <p class="insight-item__text">Owning both disciplines simultaneously meant design problems could be solved at the code level and engineering decisions could be evaluated against player experience — a feedback loop that would have been slower with a hand-off between two people.</p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+        <!-- ─── 9. Gallery ────────────────── -->
+        <section id="gallery" class="proj-section">
+          <h2 class="proj-section__heading">Gallery</h2>
+          <div class="proj-prose">
+            <p>In-engine screenshots across levels, UI states, and environment highlights.</p>
+          </div>
+
+          <!-- project.css: .image-grid--3col > .image-grid__item > .image-grid__img + .image-grid__caption -->
+          <div class="image-grid image-grid--3col">
+
+            <div class="image-grid__item">
+              <img class="image-grid__img" src="pictures/wildquest-01.jpg" alt="Level 1 — Captivity environment" loading="lazy" />
+              <p class="image-grid__caption">Level 1 — Captivity environment</p>
+            </div>
+
+            <div class="image-grid__item">
+              <img class="image-grid__img" src="pictures/wildquest-02.jpg" alt="Character controller — mid-jump over a hazard" loading="lazy" />
+              <p class="image-grid__caption">Character controller — jump arc</p>
+            </div>
+
+            <div class="image-grid__item">
+              <img class="image-grid__img" src="pictures/wildquest-03.jpg" alt="Level 3 — Moving platform sequence" loading="lazy" />
+              <p class="image-grid__caption">Level 3 — Moving platforms</p>
+            </div>
+
+            <div class="image-grid__item">
+              <img class="image-grid__img" src="pictures/wildquest-04.jpg" alt="In-game HUD showing health and progress" loading="lazy" />
+              <p class="image-grid__caption">In-game HUD</p>
+            </div>
+
+            <div class="image-grid__item">
+              <img class="image-grid__img" src="pictures/wildquest-05.jpg" alt="Main menu screen" loading="lazy" />
+              <p class="image-grid__caption">Main menu — UI design</p>
+            </div>
+
+            <div class="image-grid__item">
+              <img class="image-grid__img" src="pictures/wildquest-06.jpg" alt="Level 5 — Final outdoor environment" loading="lazy" />
+              <p class="image-grid__caption">Level 5 — Final environment</p>
+            </div>
+
+          </div>
+        </section>
+
+      </article>
+    </div><!-- /.proj-body__container -->
+  </div><!-- /.proj-body -->
+
+  <!-- ═══════════════════════════════════════
+       PROJECT NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav class="proj-nav" aria-label="Project navigation">
+    <div class="container">
+      <a class="proj-nav__back" href="index.html">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All Projects
+      </a>
+      <a class="proj-nav__next" href="Capstone.html">
+        <span>Next Project</span>
+        <strong>WebXR Experience</strong>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Reading progress bar script -->
+  <script>
+    const bar = document.getElementById('readingProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrollTop / docHeight * 100) + '%';
+    });
+
+    // TOC active link highlight
+    const sections = document.querySelectorAll('.proj-section');
+    const links = document.querySelectorAll('.proj-toc__link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('is-active'));
+          const active = document.querySelector(`.proj-toc__link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>

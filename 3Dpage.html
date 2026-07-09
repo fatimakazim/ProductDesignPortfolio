@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>3D Modeling & Industrial Design Portfolio</title>
+  <meta
+    name="description"
+    content="A comprehensive showcase of 3D production asset pipelines, character design, parametric CAD engineering, and physical furniture fabrication."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="ice.css" />
+</head>
+
+<body>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog">
+  <ul class="mobile-menu__links" role="list">
+    <li><a href="index.html#work" class="mobile-menu__link">Work</a></li>
+    <li><a href="index.html#experience" class="mobile-menu__link">Experience</a></li>
+    <li><a href="index.html#contact" class="mobile-menu__link">Contact</a></li>
+  </ul>
+</div>
+
+<header class="proj-hero">
+  <div class="container">
+    <nav class="proj-breadcrumb">
+      <a href="index.html" class="proj-breadcrumb__link">Portfolio</a>
+      <span class="proj-breadcrumb__sep">→</span>
+      <span class="proj-breadcrumb__current">Featured Works Portfolio</span>
+    </nav>
+
+    <h1 class="proj-hero__title reveal reveal--up" style="--delay:.05s">
+      3D Modeling & Industrial Design Works
+    </h1>
+  </div>
+</header>
+
+<main class="proj-body">
+<div class="container proj-body__container">
+
+  <aside class="proj-toc">
+    <nav aria-label="Portfolio Index Menu">
+      <p class="proj-toc__label">Portfolio Index</p>
+      <ul class="proj-toc__list">
+        <li class="proj-toc__group-title">01. 3D Asset Pipelines</li>
+        <li><a href="#description-1" class="proj-toc__link is-active">Humanoid AI Character</a></li>
+        <li><a href="#gallery-1" class="proj-toc__link">Character Assets</a></li>
+        
+        <li class="proj-toc__group-title" style="margin-top: 1.5rem;">02. Furniture Architecture</li>
+        <li><a href="#axis-overview" class="proj-toc__link">The Axis Chair Case</a></li>
+        <li><a href="#axis-gallery" class="proj-toc__link">Axis Production Gallery</a></li>
+        
+        <li class="proj-toc__group-title" style="margin-top: 1.5rem;">03. Flat-Pack Parametrics</li>
+        <li><a href="#facet-overview" class="proj-toc__link">The Facet Chair Case</a></li>
+        <li><a href="#facet-gallery" class="proj-toc__link">Facet Production Gallery</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <article class="proj-article">
+
+    <div class="project-block" style="margin-bottom: 6rem;" id="ai-character">
+      <header class="project-block__header">
+        <h2 class="reveal reveal--up" style="font-size: 2.5rem; margin-bottom: 1rem; font-family: 'DM Serif Display', serif;">
+          01. Humanoid AI Character Pipeline
+        </h2>
+      </header>
+
+      <dl class="proj-hero__meta reveal reveal--up" style="--delay:.1s; margin-bottom: 2rem;">
+        <div class="proj-hero__meta-item">
+          <dt>Software Engine Suite</dt>
+          <dd>Autodesk Maya • Substance Painter • Blender • Mudbox</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Project Typology</dt>
+          <dd>Character Modeling, Rigging & Cinematic Rig Pipelines</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Render Strategy</dt>
+          <dd>Arnold (Multi-pass PBR & Material Layering)</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Year Focus</dt>
+          <dd>2026</dd>
+        </div>
+      </dl>
+
+      <section class="proj-section" id="description-1" aria-labelledby="description-heading-1">
+        <h3 class="proj-section__heading reveal reveal--up" id="description-heading-1">Project Description & Pipeline Study</h3>
+        <div class="proj-prose reveal reveal--up" style="--delay:.05s">
+          <p>
+            This project explores the relationship between humanity and machine intelligence through the engineering of an original humanoid character. Inspired by the narrative themes of <em>I, Robot (2004)</em>, the objective focused on executing an end-to-end production asset pipeline, managing complex character mechanics from initial design sketches through to animation-ready controls.
+          </p>
+          <p>
+            <strong>Technical Geometry & Structural Topology:</strong> Component parts were custom-modeled within Autodesk Maya using Sub-D modeling parameters to establish strict animation-ready edge loops and optimized topology across complex moving zones. To provide deep facial articulation, a custom-designed control rig was created alongside target blend shapes, facilitating detailed micro-expressions and synchronized dialogue sequences.
+          </p>
+          <p>
+            <strong>Material Development & Look Dev passes:</strong> Surface detailing was mapped out entirely using Substance Painter, building material variations across separate PBR channels. Advanced shader parameters utilized subsurface scattering (SSS) maps and custom surface roughness variations via the Arnold engine to simulate reflective composite alloys and translucent components.
+          </p>
+        </div>
+      </section>
+
+      <section class="proj-section" id="gallery-1" aria-labelledby="gallery-heading-1">
+        <h3 class="proj-section__heading reveal reveal--up" id="gallery-heading-1">Asset Delivery & Core Renders</h3>
+        <div class="image-grid image-grid--2col reveal reveal--up" style="--delay:.05s">
+          <figure class="image-grid__item">
+            <img src="pictures/camera-1.jpg" alt="Humanoid AI Character Front View Orthographic Beauty Pass" class="image-grid__img" loading="lazy">
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #666;">Front view render pass highlighting surface reflections and specular responses.</figcaption>
+          </figure>
+          <figure class="image-grid__item">
+            <img src="pictures/camera-2.jpg" alt="Three-Quarter Profile Close-up Detail Render" class="image-grid__img" loading="lazy">
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #666;">Three-quarter isometric render demonstrating material depth and part integration.</figcaption>
+          </figure>
+          <figure class="image-grid__item">
+            <img src="pictures/camera-3.jpg" alt="Animation Topology Wireframe Density Pass" class="image-grid__img" loading="lazy">
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #666;">Wireframe render showing edge flows and polygon distributions for rigging constraints.</figcaption>
+          </figure>
+          <figure class="image-grid__item">
+            <img src="pictures/camera-4.jpg" alt="Subsurface Scattering Shader Interface Detail Pass" class="image-grid__img" loading="lazy">
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #666;">Macro camera render highlighting semi-translucent material layers.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid var(--border-color, #ccc); margin: 5rem 0;" />
+
+    <div class="project-block" style="margin-bottom: 6rem;" id="axis-chair">
+      <header class="project-block__header">
+        <h2 class="reveal reveal--up" style="font-size: 2.5rem; margin-bottom: 1rem; font-family: 'DM Serif Display', serif;">
+          02. The Axis Chair
+        </h2>
+        <p style="font-style: italic; color: #555; margin-bottom: 1.5rem;">Industrial Design Project by Fatima Kazim</p>
+      </header>
+
+      <dl class="proj-hero__meta reveal reveal--up" style="--delay:.1s; margin-bottom: 2rem;">
+        <div class="proj-hero__meta-item">
+          <dt>Materials & Machinery</dt>
+          <dd>Repetitive Wood Slats • Festool Domino System • DeWalt Hardware Platforms</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Design Typology</dt>
+          <dd>Deconstructed Seating Systems / Linear Array Forms</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Engineering Focus</dt>
+          <dd>Anthropometric Clearance Mapping & Spatial Load Balancing</dd>
+        </div>
+      </dl>
+
+      <section class="proj-section" id="axis-overview" aria-labelledby="description-heading-2">
+        <h3 class="proj-section__heading reveal reveal--up" id="description-heading-2">Design Philosophy & Shop Fabrication</h3>
+        <div class="proj-prose reveal reveal--up">
+          <p>
+            The <strong>Axis Chair</strong> is an exploration into structural geometry, analyzing the conversion of linear planes into load-bearing human seating. The project breaks down continuous furniture volumes into an organized array of repetitive wooden slats, generating a rhythmic, deconstructed form while preserving physical stability.
+          </p>
+          <p>
+            <strong>Anthropometric Blueprints & Tolerances:</strong> Starting from initial scale prototypes, blueprints were developed to translate human clearance constraints into precise shop dimensions. To maintain a unified aesthetic across the horizontal and vertical planes, the layout used strict <strong>2.5 cm structural gaps</strong>. The material parts list was configured down to the millimeter: processing structural profiles into primary <strong>42 cm base support lengths</strong>, reinforced with <strong>37 cm, 25 cm, and 23 cm structural support struts</strong>.
+          </p>
+          <p>
+            <strong>Assembly Workflows:</strong> Joining operations prioritised joint shear resilience; framework intersections were routed to use strong internal mechanical joints via a specialized <strong>Festool Domino system (N403 configuration)</strong> and high-torque <strong>DeWalt fabrication platforms</strong> to secure flush, structural timber assemblies.
+          </p>
+        </div>
+      </section>
+
+    <section class="proj-section" id="axis-gallery" aria-labelledby="gallery-heading-2">
+  <h3 class="proj-section__heading reveal reveal--up" id="gallery-heading-2">
+    The Axis Chair Fabrication Pipeline
+  </h3>
+
+  <div class="image-grid image-grid--2col reveal reveal--up">
+
+    <figure class="image-grid__item">
+      <img
+        src="pictures/moodboard.jpg"
+        alt="Axis Chair ideation sketches and blueprints"
+        class="image-grid__img"
+        loading="lazy"
+      >
+      <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+        <strong>Step 1: Ideation & Blueprints</strong> — Iterative grid-paper drafts mapping profile cuts and continuous linear progressions.
+      </figcaption>
+    </figure>
+
+    <figure class="image-grid__item">
+      <img
+        src="pictures/proto.jpg"
+        alt="Axis Chair scale prototype"
+        class="image-grid__img"
+        loading="lazy"
+      >
+      <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+        <strong>Step 2: Scale Prototyping</strong> — Structural models testing recline dynamics and multi-slat arrays before full production.
+      </figcaption>
+    </figure>
+
+    <figure class="image-grid__item">
+      <img
+        src="pictures/align.jpg"
+        alt="Axis Chair woodshop assembly"
+        class="image-grid__img"
+        loading="lazy"
+      >
+      <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+        <strong>Step 3: Precision Joint Alignment</strong> — Machining structural joints with the Festool Domino loader to conceal connection points.
+      </figcaption>
+    </figure>
+
+    <figure class="image-grid__item">
+      <img
+        src="pictures/finalchair.jpg"
+        alt="Completed Axis Chair"
+        class="image-grid__img"
+        loading="lazy"
+      >
+      <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+        <strong>Step 4: Realized Assembly Form</strong> — The completed furniture piece demonstrating clean linear spacing and structural strength.
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid var(--border-color, #ccc); margin: 5rem 0;" />
+
+    <div class="project-block" id="facet-chair">
+      <header class="project-block__header">
+        <h2 class="reveal reveal--up" style="font-size: 2.5rem; margin-bottom: 1rem; font-family: 'DM Serif Display', serif;">
+          03. The Facet Chair
+        </h2>
+        <p style="font-style: italic; color: #555; margin-bottom: 1.5rem;">Independent Industrial Design Study by Fatima Kazim</p>
+      </header>
+
+      <dl class="proj-hero__meta reveal reveal--up" style="--delay:.1s; margin-bottom: 2rem;">
+        <div class="proj-hero__meta-item">
+          <dt>Digital Software Platform</dt>
+          <dd>Autodesk Fusion 360 (Parametric Architecture Suite) • Illustrator</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Art Movement Study</dt>
+          <dd>Analytical Cubism / Geometric Fragmentation / Angular Planes</dd>
+        </div>
+        <div class="proj-hero__meta-item">
+          <dt>Digital Manufacturing Focus</dt>
+          <dd>Interlocking Flat-Pack Systems • CNC Laser Profiling Toolpaths</dd>
+        </div>
+      </dl>
+
+      <section class="proj-section" id="facet-overview" aria-labelledby="description-heading-3">
+        <h3 class="proj-section__heading reveal reveal--up" id="description-heading-3">Conceptual Framework & Parametric Assembly Workflow</h3>
+        <div class="proj-prose reveal reveal--up">
+          <p>
+            The <strong>Facet Chair</strong> is a flat-pack furniture system built on the structural principles of Analytical Cubism. Moving away from traditional fluid curves, the seating structure breaks down functional volume into an array of intersecting angular planes, triangular structures, and multi-perspective flat facets that rise cleanly from a low-profile base substrate. This design bridges artistic sculpture with home commodities, transforming structural panels into elements that add to the visual flow and structural stability of the piece.
+          </p>
+          <p>
+            <strong>Parametric Modeling & Fabrication Toolpaths:</strong> Design requirements moved from early research mood boards and modular sketches into <strong>Autodesk Fusion 360</strong>. Solid and surface modeling tools were used to build the panel geometries and verify seating dimensions, recline angles, and center-of-gravity load metrics.
+          </p>
+          <p>
+            Rather than using secondary structural fasteners, mechanical design formulas were introduced to integrate precise, tight <strong>CNC interlocking joinery techniques</strong> straight into the sheet layouts. Nesting blueprints were prepared, optimized, and output as laser vectors, with multiple low-scale fabrication models built to verify interface tolerances before processing final sheet stock.
+          </p>
+        </div>
+      </section>
+
+      <section class="proj-section" id="facet-gallery" aria-labelledby="gallery-heading-3">
+        <h3 class="proj-section__heading reveal reveal--up" id="gallery-heading-3">The Facet Chair Engineering Pipeline</h3>
+        <div class="image-grid image-grid--2col reveal reveal--up">
+          <figure class="image-grid__item">
+             <img
+    src="pictures/a.jpg"
+    alt="Facet Chair moodboard and sketches"
+    class="image-grid__img"
+    loading="lazy"
+  >
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+              <strong>Step 1: Research & Drawing Analysis</strong> — Early design concepts exploring geometric fragmentation and component configuration options.
+            </figcaption>
+          </figure>
+          <figure class="image-grid__item">
+             <img
+    src="pictures/b.jpg"
+    alt="Facet Chair moodboard and sketches"
+    class="image-grid__img"
+    loading="lazy"
+  >
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+              <strong>Step 2: Parametric Solid Modeling</strong> — Engineering panel intersections and calculating locking tolerances inside Autodesk Fusion 360.
+            </figcaption>
+          </figure>
+          <figure class="image-grid__item">
+             <img
+    src="pictures/c.jpg"
+    alt="Facet Chair moodboard and sketches"
+    class="image-grid__img"
+    loading="lazy"
+  >
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+              <strong>Step 3: Rapid Material Testing</strong> — Assembling small-scale laser cuts to verify connection stability and component slotting behavior.
+            </figcaption>
+          </figure>
+          <figure class="image-grid__item">
+            <img
+    src="pictures/d.jpg"
+    alt="Facet Chair moodboard and sketches"
+    class="image-grid__img"
+    loading="lazy"
+  >
+            <figcaption style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">
+              <strong>Step 4: Final Assembled Commodity</strong> — The completed flat-pack Facet Chair showcasing sharp, intersecting geometric surfaces.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+  </article>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__back">
+      <a href="#" class="footer__top-link">Back to top ↑</a>
+    </p>
+  </div>
+</footer>
+
+<div class="grain" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+<script src="project.js"></script>
+
+</body>
+</html>
