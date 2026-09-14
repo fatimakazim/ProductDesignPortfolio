@@ -31,16 +31,18 @@ Reframing Partition Memories
 </h1>
 
 <p class="proj-prose" style="margin-bottom: var(--space-10);">
-A browser-based Virtual Reality experience that reconstructs Saidpur Village
-through WebXR, spatial audio, and oral history to explore how architecture,
-memory, and identity intersect in the aftermath of the 1947 Partition.
+An immersive WebXR installation that turns a historic village into a spatial
+storytelling environment — reconstructing Saidpur Village near Islamabad in
+3D and layering it with oral history, spatial audio, and guided navigation,
+exhibited as a live, walk-up experience for visitors at NYU Shanghai's
+capstone show.
 </p>
 
 <dl class="proj-hero__meta">
 
 <div class="proj-hero__meta-item">
 <dt>Role</dt>
-<dd>VR Experience Designer & Developer</dd>
+<dd>Experience Designer & Developer</dd>
 </div>
 
 <div class="proj-hero__meta-item">
@@ -50,7 +52,7 @@ memory, and identity intersect in the aftermath of the 1947 Partition.
 
 <div class="proj-hero__meta-item">
 <dt>Type</dt>
-<dd>Immersive WebXR Experience</dd>
+<dd>Immersive WebXR Installation</dd>
 </div>
 
 </dl>
@@ -89,14 +91,26 @@ Contents
 <ul class="proj-toc__list">
 
 <li>
-<a class="proj-toc__link" href="#overview">
-Overview
+<a class="proj-toc__link" href="#role">
+Role & Contribution
 </a>
 </li>
 
 <li>
-<a class="proj-toc__link" href="#why">
-Why Saidpur Village
+<a class="proj-toc__link" href="#challenge">
+The Experience Challenge
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#concept">
+Experience Concept
+</a>
+</li>
+
+<li>
+<a class="proj-toc__link" href="#journey">
+Visitor Journey
 </a>
 </li>
 
@@ -113,14 +127,14 @@ Polyhedron Narrator
 </li>
 
 <li>
-<a class="proj-toc__link" href="#audio">
-Solving WebXR Audio
+<a class="proj-toc__link" href="#friction">
+Designing for the Show Floor
 </a>
 </li>
 
 <li>
-<a class="proj-toc__link" href="#history">
-Oral History
+<a class="proj-toc__link" href="#content">
+Content as Experience
 </a>
 </li>
 
@@ -131,20 +145,26 @@ Technical Stack
 </li>
 
 <li>
+<a class="proj-toc__link" href="#audio">
+Solving WebXR Audio
+</a>
+</li>
+
+<li>
 <a class="proj-toc__link" href="#principles">
 Design Principles
 </a>
 </li>
 
 <li>
-<a class="proj-toc__link" href="#reflection">
-Reflection
+<a class="proj-toc__link" href="#transfer">
+What This Demonstrates
 </a>
 </li>
 
 <li>
-<a class="proj-toc__link" href="#gallery">
-Gallery
+<a class="proj-toc__link" href="#reflection">
+Reflection
 </a>
 </li>
 
@@ -156,39 +176,44 @@ Gallery
 
 <article class="proj-article">
 
-<section id="overview" class="proj-section">
+<!-- ===========================================================
+ROLE
+=========================================================== -->
+<section id="role" class="proj-section">
 
 <h2 class="proj-section__heading">
-Overview
+Role & Contribution
 </h2>
+
+<figure class="proj-banner">
+    <img
+        src="pictures/role-contribution.jpg"
+        alt="Development process showing the creation of the VR experience"
+        loading="lazy"
+    >
+</figure>
 
 <div class="proj-prose">
 
 <p>
 
-Reframing Partition Memories is a browser-based Virtual Reality experience
-that reconstructs Saidpur Village, a historically layered settlement on the
-outskirts of Islamabad, as an immersive space for engaging with the human
-stories surrounding the 1947 Partition of India.
+I designed and built this experience end to end: the concept, the visitor
+journey, the narrative structure, the 3D reconstruction, the interaction
+design, the narrator, the audio system, and the implementation — and I was
+also responsible for taking it from a browser build to a working
+installation at NYU Shanghai's capstone exhibition, a three-day show where
+it ran for walk-up visitors rather than living only as a link on a server.
 
 </p>
 
 <p>
 
-Instead of presenting history through dates, statistics, or maps, the
-experience explores what Partition feels like when users stand inside the
-spaces where these stories unfolded. By combining architectural
-reconstruction, spatial audio, oral testimony, and immersive media, the
-project transforms physical places into living archives of memory.
-
-</p>
-
-<p>
-
-The project was developed entirely as a custom WebXR application using
-A-Frame and Three.js rather than a conventional 360° tour, allowing users
-to freely explore, interact with guided experiences, and move seamlessly
-between reconstructed environments and real-world locations.
+That combination mattered. Because I could move directly between a design
+idea and a working prototype, I could test whether a concept held up the
+moment I had it. And because I knew it had to work in front of strangers on
+a show floor, not just for me at my desk, I designed every interaction
+assuming the visitor had never touched VR before and had about ten seconds
+of patience before deciding whether to stay.
 
 </p>
 
@@ -196,78 +221,238 @@ between reconstructed environments and real-world locations.
 
 </section>
 
-<section id="why" class="proj-section">
+<!-- ===========================================================
+CHALLENGE
+=========================================================== -->
+<section id="challenge" class="proj-section">
 
 <h2 class="proj-section__heading">
-Why Saidpur Village
+The Experience Challenge
 </h2>
 
 <div class="proj-prose">
 
 <p>
 
-Saidpur Village was selected because of its unique historical layers,
-architectural diversity, and ability to preserve traces of communities that
-once lived together before Partition.
+Most presentations of Partition history rely on text, photographs, or
+timelines — formats that describe events from the outside. They're useful
+for information, but they keep the reader at a distance from the thing
+they're trying to understand: a lived, physical, embodied loss.
 
 </p>
 
 <p>
 
-Unlike generalized historical recreations, grounding the experience within
-a single real location allows visitors to understand history through place
-rather than abstraction. Temples, residential streets, markets, and a
-mosque coexist within walking distance, making the village itself an active
-storyteller.
+The question I set out to answer was simple to state and hard to solve:
+how might I turn historical memory from something people read about into
+something they can move through? And because the answer needed to work as
+a live installation, not just a demo I narrated myself, it came with a
+second question: how do I make that work for a visitor who walks up to a
+booth, has never worn a headset, and has to understand what to do within
+seconds?
+
+</p>
+
+<p>
+
+That's an experience-design problem before it's a technical one. It meant
+deciding what a visitor should feel oriented by, what should invite
+curiosity, what should be optional, and where the story needed to interrupt
+free exploration to make sure a specific memory landed — all while
+assuming zero prior instruction. The 3D reconstruction, the narrator, and
+the audio system came after those decisions; they're the medium, not the
+point.
 
 </p>
 
 </div>
 
-<ul class="feature-list">
+</section>
 
-<li class="feature-list__item">
+<!-- ===========================================================
+CONCEPT
+=========================================================== -->
+<section id="concept" class="proj-section">
 
-<span class="feature-list__label">
-Layered History
-</span>
+<h2 class="proj-section__heading">
+Experience Concept
+</h2>
 
-<span class="feature-list__desc">
-Multiple political and demographic transitions remain visible through the
-village's architecture and urban fabric.
-</span>
+<div class="proj-prose">
 
+<p>
+
+The experience is built around a single real place: Saidpur Village, on the
+outskirts of Islamabad. Its architecture still carries the layers of the
+communities who lived there before Partition — temples, a mosque,
+residential streets, and market lanes sit within walking distance of each
+other, evidence of a multicultural life that Partition interrupted.
+
+</p>
+
+<p>
+
+Grounding the experience in one specific village, instead of a generalized
+or composite setting, was a deliberate choice. It meant the story could stay
+concrete rather than symbolic, and it meant the environment itself could do
+narrative work: a temple standing next to a mosque tells a visitor something
+a caption never could.
+
+</p>
+
+<p>
+
+That's why the architecture isn't a backdrop for the story — it's the
+interface. Oral testimony is attached to the specific locations where those
+memories happened, so a visitor doesn't consume the story in a fixed order.
+They uncover it the way memory itself works: unevenly, tied to place, and
+shaped by where curiosity leads them.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================================================
+VISITOR JOURNEY
+=========================================================== -->
+<section id="journey" class="proj-section">
+
+<h2 class="proj-section__heading">
+Visitor Journey
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Underneath the 3D environment and the narrator system is a journey I
+designed stage by stage, thinking about attention, orientation, and pacing
+before I thought about implementation — and thinking about it for a
+stranger stepping up to a headset at a show, not for a visitor who already
+knew what to expect.
+
+</p>
+
+</div>
+
+<ul class="finding-list">
+
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">A</span>
+<h3 class="finding-item__title">Entry — Cinematic Threshold</h3>
+</div>
+<p class="finding-item__problem">
+A brief holographic sequence sets historical context before the visitor
+takes control. It exists to give first-time visitors a reason to care
+before they're handed navigation — and it's skippable, so it never gates
+anyone who's already been queuing to try it.
+</p>
 </li>
 
-<li class="feature-list__item">
-
-<span class="feature-list__label">
-Architectural Diversity
-</span>
-
-<span class="feature-list__desc">
-Religious, residential, and commercial spaces reveal the multicultural
-character of the village before Partition.
-</span>
-
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">B</span>
+<h3 class="finding-item__title">Orientation</h3>
+</div>
+<p class="finding-item__problem">
+The narrator appears and establishes itself as a guide rather than a
+character to follow blindly. This is the moment a visitor who's never used
+VR learns the basic grammar of the space: how to move, and that the
+polyhedron is safe to approach.
+</p>
 </li>
 
-<li class="feature-list__item">
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">C</span>
+<h3 class="finding-item__title">Exploring the Reconstructed Village</h3>
+</div>
+<p class="finding-item__problem">
+Visitors move freely through Saidpur, or let the narrator lead them between
+ten historically significant locations. Either way, agency stays with the
+visitor — guidance is offered, not imposed, which matters when you can't
+predict how comfortable a given visitor will be with the controls.
+</p>
+</li>
 
-<span class="feature-list__label">
-Memory Through Place
-</span>
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">D</span>
+<h3 class="finding-item__title">Discovering Hotspots</h3>
+</div>
+<p class="finding-item__problem">
+Interactive markers surface naturally as visitors approach specific
+buildings and streets, rewarding exploration rather than demanding it — a
+deliberately low-effort way to keep someone curious a few seconds longer.
+</p>
+</li>
 
-<span class="feature-list__desc">
-Visitors experience history by moving through reconstructed spaces rather
-than reading a chronological narrative.
-</span>
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">E</span>
+<h3 class="finding-item__title">Entering 360° Documentary Media</h3>
+</div>
+<p class="finding-item__problem">
+Selecting a hotspot transitions the visitor into a panoramic photo or video
+capture of the real location — a shift from reconstruction to document that
+grounds the story in something that actually exists.
+</p>
+</li>
 
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">F</span>
+<h3 class="finding-item__title">Hearing Oral Testimony</h3>
+</div>
+<p class="finding-item__problem">
+Spatial audio delivers a resident's memory of that exact location, timed so
+the visitor is looking at the place being described while they hear about
+it.
+</p>
+</li>
+
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">G</span>
+<h3 class="finding-item__title">Returning to the Reconstruction</h3>
+</div>
+<p class="finding-item__problem">
+The visitor is brought back into the 3D village rather than left in the
+documentary layer, so the reconstruction keeps functioning as the spine of
+the experience rather than a menu.
+</p>
+</li>
+
+<li class="finding-item">
+<div class="finding-item__header">
+<span class="finding-item__number">H</span>
+<h3 class="finding-item__title">Continuing to the Next Location</h3>
+</div>
+<p class="finding-item__problem">
+The narrator resumes its role and the cycle of movement, discovery, and
+testimony repeats — with enough variation in pacing that it holds up over
+a few minutes at a booth, not just a single scripted pass.
+</p>
 </li>
 
 </ul>
 
+<figure class="proj-banner">
+    <img
+        src="pictures/partition01.jpg"
+        alt="Visitor exploring the reconstructed village environment"
+        loading="lazy"
+    >
+    <figcaption>
+        
+    </figcaption>
+</figure>
+
 </section>
+
 <!-- ===========================================================
 EXPERIENCE ARCHITECTURE
 =========================================================== -->
@@ -282,11 +467,11 @@ Experience Architecture
 
 <p>
 
-Rather than functioning as a traditional VR tour, the experience is
-structured as three interconnected layers. Each offers a different way of
-understanding the same physical location, allowing users to move fluidly
-between historical reconstruction, documentary media, and personal
-testimony.
+The journey above is built on three interconnected layers. Each gives a
+visitor a different way of relating to the same physical place, and moving
+between them is itself part of the design — reconstruction, documentary
+media, and testimony are meant to feel like different depths of the same
+world, not separate apps stitched together.
 
 </p>
 
@@ -300,16 +485,19 @@ testimony.
 
 <p>
 
-The experience opens with a holographic cinematic sequence introducing the
-historical context before users gain full control. The introduction can be
-skipped at any point, ensuring experienced users aren't forced through
-lengthy exposition while still providing newcomers with meaningful context.
+<strong>Purpose:</strong> give the visitor a reason to care before asking
+them to explore. <strong>What the visitor does:</strong> watches a short
+holographic sequence, or skips it immediately. <strong>Why I designed it
+this way:</strong> a cold open into free exploration works for a visitor
+who already knows the history, but loses everyone else in the first ten
+seconds of a booth interaction; a mandatory introduction loses the opposite
+group, who won't wait through it in a public setting. Making it skippable
+resolved that without picking a side.
 
 </p>
 
 </div>
 
-<h3 class="proj-section__subheading">
 <h3 class="proj-section__subheading">
 2. Interactive Architectural Reconstruction
 </h3>
@@ -317,7 +505,7 @@ lengthy exposition while still providing newcomers with meaningful context.
 <figure class="proj-banner">
     <img
         src="pictures/architectural-model.jpg"
-       
+        alt="The interactive 3D reconstruction of Saidpur Village used throughout the experience"
         loading="lazy"
     >
     <figcaption>
@@ -329,40 +517,52 @@ lengthy exposition while still providing newcomers with meaningful context.
 
 <p>
 
-At the heart of the experience lies a detailed reconstruction of Saidpur
-Village created as a GLTF environment. Users may freely explore using
-desktop controls or VR locomotion, or choose to follow a guided experience
-that leads them through ten historically significant locations.
-
-</p>
-
-<p>
-
-Each stop contains interactive hotspots connecting the reconstructed model
-to oral testimony, archival information, and immersive 360° media captured
-from the real site.
+<strong>Purpose:</strong> function as the "home base" of the experience —
+the space a visitor always returns to. <strong>What the visitor does:</strong>
+walks or teleports through a GLTF reconstruction of the village, either
+freely or along a guided path through ten locations. <strong>Why I designed
+it this way:</strong> free exploration gives a visitor ownership of the
+experience; the guided path exists for anyone who'd rather be shown around
+than figure it out themselves — which, at a show, is most first-time
+visitors. Both routes lead to the same hotspots, so neither visitor sees a
+lesser version of the village.
 
 </p>
 
 </div>
 
 <h3 class="proj-section__subheading">
-3. Immersive 360° Experiences
+3. Immersive 360° Documentary Experiences
 </h3>
 
 <div class="proj-prose">
 
 <p>
 
-Selecting a hotspot transports visitors directly into panoramic photo and
-video captures of the actual location. These documentary spaces are layered
-with spatial audio recordings collected from local residents, allowing users
-to hear stories precisely where they occurred before returning seamlessly to
-the reconstructed environment.
+<strong>Purpose:</strong> connect the reconstruction back to the real,
+physical village. <strong>What the visitor does:</strong> steps into
+panoramic photo and video captures of the actual site, layered with spatial
+audio recorded from local residents. <strong>Why I designed it this way:</strong>
+a fully reconstructed environment risks feeling like a diorama. Cutting to
+real photographic and video documentation at the moment of testimony makes
+it unmistakable that this happened somewhere real, before returning the
+visitor to the model to continue.
 
 </p>
 
 </div>
+
+<figure class="proj-banner">
+    <img
+        src="pictures/partition02.jpg"
+        alt="Transition from the 3D reconstruction into 360° documentary media"
+        loading="lazy"
+    >
+    <figcaption>
+        The transition point between the reconstructed village and real
+        photographic and video documentation of the site.
+    </figcaption>
+</figure>
 
 </section>
 
@@ -388,24 +588,41 @@ The Polyhedron Narrator
 
 <p>
 
-One of the project's defining features is a custom-designed holographic
-polyhedron that serves as the experience's guide. Rather than using a human
-avatar, the narrator appears as an abstract geometric object inspired by
-Dürer's <em>Melencolia I</em>, emphasizing that no single individual owns
-the collective memories being shared.
+I deliberately avoided a human avatar as the guide. A face or a body implies
+a single storyteller, and these are collective memories that belong to many
+residents, not one. Instead, the narrator is an abstract holographic
+polyhedron, its form inspired by the geometric solid in Dürer's
+<em>Melencolia I</em> — recognizable as a presence, but not a person.
 
 </p>
 
 <p>
 
-The polyhedron functions as a living vessel for oral testimony. It guides
-users throughout the experience while visually responding to their movement,
-creating a subtle emotional connection without relying on human
-representation.
+Its job is continuity. Every stop in the journey looks and sounds different
+— reconstruction, documentary photo, testimony audio — and the narrator is
+the one constant across all of them, so a visitor never loses the thread of
+who's guiding them or why. It responds visually to how close a visitor
+stands, which gives it enough presence to feel attentive without needing
+dialogue or a face to do that work.
+
+</p>
+
+<p>
+
+Guided navigation matters here specifically because this is a ten-stop
+journey, run at a public exhibition for visitors who mostly hadn't used VR
+before: without an option to be led, a visitor unfamiliar with 3D
+navigation could easily miss half the village or wander off entirely. The
+narrator makes that option feel like being shown around by a companion
+rather than being put on rails.
 
 </p>
 
 </div>
+
+<p class="proj-section__subheading" style="margin-top: var(--space-8);">
+Behind the interaction
+</p>
 
 <ul class="feature-list">
 
@@ -416,10 +633,8 @@ State Machine
 </span>
 
 <span class="feature-list__desc">
-
-A fully custom behavioural system governs every interaction using states for
+A custom behavioural system governs the narrator through states for
 movement, waiting, narration, arrival, and completion.
-
 </span>
 
 </li>
@@ -431,10 +646,8 @@ Reactive Behaviour
 </span>
 
 <span class="feature-list__desc">
-
-Glow intensity, particle density, and rotational movement dynamically adjust
-based on the user's proximity.
-
+Glow intensity, particle density, and rotation adjust dynamically based on
+the visitor's proximity.
 </span>
 
 </li>
@@ -446,10 +659,8 @@ Custom GLSL Shaders
 </span>
 
 <span class="feature-list__desc">
-
-The holographic appearance was created entirely with handwritten GLSL
-vertex and fragment shaders layered with particle systems and orbital rings.
-
+The holographic appearance is handwritten in GLSL, layered with particle
+systems and orbital rings.
 </span>
 
 </li>
@@ -461,12 +672,204 @@ Guided Navigation
 </span>
 
 <span class="feature-list__desc">
-
-Smooth interpolation allows the narrator to travel naturally between ten
-historically significant locations across the reconstructed village.
-
+Smooth interpolation lets the narrator travel naturally between the ten
+locations across the reconstructed village.
 </span>
 
+</li>
+
+</ul>
+
+</section>
+
+<!-- ===========================================================
+DESIGNING FOR THE SHOW FLOOR
+=========================================================== -->
+<section id="friction" class="proj-section">
+
+<h2 class="proj-section__heading">
+Designing for the Show Floor
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Running this as a live installation at a three-day exhibition — rather than
+as a link people opened on their own time — changed what "usability" meant.
+A visitor at a booth has no manual, no onboarding call, and usually no
+patience for either. They either understand what to do in the first few
+seconds or they walk away.
+
+</p>
+
+<p>
+
+That shaped concrete decisions. The experience runs on desktop and in VR
+from the same build, so it could flex to whatever setup the booth had on a
+given day. The introduction is skippable, guided and free exploration are
+both always available, and every hotspot is visually distinct enough that
+a first-time visitor never has to wonder where they're allowed to interact
+— there was no one standing behind them to explain it every time.
+
+</p>
+
+<p>
+
+None of this lowers the ambition of the experience. It's the opposite:
+immersive technology that requires a visitor to fight it stops being
+immersive the moment they notice it. Designing for people encountering the
+piece cold, in a public space, for the first and only time, is what made it
+a real installation rather than a demo that only worked when I was the one
+explaining it.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================================================
+CONTENT AS EXPERIENCE
+=========================================================== -->
+
+<section id="content" class="proj-section">
+
+<h2 class="proj-section__heading">
+Turning Content Into Experience
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Every piece of testimony is anchored to the exact location where it
+happened, rather than collected into a transcript a visitor scrolls
+through. That single decision changes what the content is doing: it's not
+being displayed to the visitor, it's being discovered by them, at the pace
+and in the order they choose to move.
+
+</p>
+
+<p>
+
+The stories themselves describe neighbourhoods, courtyards, markets,
+friendships, and daily routines rather than political events in the
+abstract. Paired with spatial audio, hearing them while standing in the
+reconstructed courtyard or street they describe gives the words a sense of
+place that reading them never would.
+
+</p>
+
+<p>
+
+Architecture, photography, video, and audio are all doing narrative work
+here, not just decoration. That's the core content-design idea behind the
+whole project: memory accumulates through movement, not through more text.
+
+</p>
+
+</div>
+
+<figure class="proj-banner">
+    <img
+        src="pictures/partition03.jpg"
+        alt="Spatial audio testimony delivered at a specific location in the village"
+        loading="lazy"
+    >
+    <figcaption>
+        Testimony anchored to a specific place in the village, discovered
+        through movement rather than read as text.
+    </figcaption>
+</figure>
+
+</section>
+
+<!-- ===========================================================
+TECHNICAL STACK
+=========================================================== -->
+
+<section id="stack" class="proj-section">
+
+<h2 class="proj-section__heading">
+Technical Stack
+</h2>
+
+<div class="proj-prose">
+
+<p>
+
+Built entirely for the browser, so the experience could run on the
+installation's desktop setup, on mobile, or on a VR headset without
+installing a native application — each technical choice below was made for
+what it let the experience do, not for its own sake.
+
+</p>
+
+</div>
+
+<ul class="feature-list">
+
+<li class="feature-list__item">
+<span class="feature-list__label">A-Frame / WebXR</span>
+<span class="feature-list__desc">
+→ one build that runs across desktop and headset without separate versions.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Three.js</span>
+<span class="feature-list__desc">
+→ direct control over rendering where A-Frame's defaults weren't enough,
+especially for the narrator.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">GLTF 3D Environment</span>
+<span class="feature-list__desc">
+→ the reconstructed village, optimized to load and run in real time in a
+browser.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Web Audio API</span>
+<span class="feature-list__desc">
+→ reliable spatial, narrative audio that keeps playing throughout a WebXR
+session.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">GLSL Shaders</span>
+<span class="feature-list__desc">
+→ the narrator's holographic look, built by hand rather than from a stock
+material.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Raycaster Interaction</span>
+<span class="feature-list__desc">
+→ one hotspot system that works with a mouse cursor or a VR controller.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">VR + Desktop Controls</span>
+<span class="feature-list__desc">
+→ the same journey stays accessible regardless of what hardware a visitor
+has, or what the booth had that day.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">JavaScript</span>
+<span class="feature-list__desc">
+→ custom A-Frame components tying the narrator, hotspots, and audio system
+together.
+</span>
 </li>
 
 </ul>
@@ -501,157 +904,40 @@ Browser Audio Restrictions
 
 <p class="finding-item__problem">
 
-<strong>Problem:</strong>
+<strong>Problem:</strong> narration is the backbone of the guided journey —
+if it fails mid-session, a visitor at a live installation has no way of
+knowing whether that's intentional or broken.
 
-During active WebXR sessions, browsers frequently block playback from
-HTMLAudioElement even after a user has already interacted with the page.
-This causes narrated VR experiences to silently fail once a headset session
-begins.
+</p>
+
+<p class="finding-item__problem">
+
+<strong>Constraint:</strong> browsers frequently block playback from a
+standard HTMLAudioElement once an active WebXR session begins, even after
+the visitor has already interacted with the page. Narrated VR experiences
+built the conventional way go silent without warning the moment a headset
+session starts — a serious risk on a show floor, where nobody's watching
+to notice and restart it.
 
 </p>
 
 <p class="finding-item__solution">
 
-<strong>Solution:</strong>
-
-I engineered a custom NarrationAudioManager using the Web Audio API.
-Narration clips are preloaded into AudioBuffers, cached, and played through
-AudioBufferSourceNodes connected to a unified audio pipeline. After a single
-user gesture unlocks the AudioContext, narration continues reliably
-throughout the VR experience without interruption.
+<strong>My approach:</strong> I built a custom NarrationAudioManager on the
+Web Audio API. Narration clips preload into AudioBuffers, get cached, and
+play through AudioBufferSourceNodes routed into a single audio pipeline.
 
 </p>
 
-</li>
+<p class="finding-item__solution">
 
-</ul>
-
-</section>
-
-<!-- ===========================================================
-ORAL HISTORY
-=========================================================== -->
-
-<section id="history" class="proj-section">
-
-<h2 class="proj-section__heading">
-Oral History as Spatial Content
-</h2>
-
-<div class="proj-prose">
-
-<p>
-
-The project combines oral history with physical geography by attaching every
-testimony to the exact location where it occurred. Rather than reading a
-linear transcript, visitors encounter memories naturally as they move
-through the village.
+<strong>Result:</strong> after one user gesture unlocks the AudioContext,
+narration plays reliably for the rest of the session — something that
+mattered every single time a new visitor put the headset on over the
+course of the exhibition.
 
 </p>
 
-<p>
-
-Stories describe neighbourhoods, courtyards, markets, friendships, and
-daily routines rather than abstract political events. This transforms the
-village into a spatial archive where architecture itself becomes part of the
-storytelling process.
-
-</p>
-
-<p>
-
-By anchoring every narrative fragment to real coordinates, memory accumulates
-through movement rather than scrolling text, encouraging exploration instead
-of passive observation.
-
-</p>
-
-</div>
-
-</section>
-<!-- ===========================================================
-TECHNICAL STACK
-=========================================================== -->
-
-<section id="stack" class="proj-section">
-
-<h2 class="proj-section__heading">
-Technical Stack
-</h2>
-
-<div class="proj-prose">
-
-<p>
-
-The project was developed entirely for the browser using modern WebXR
-technologies, enabling users to experience the work on desktop computers,
-mobile devices, or VR headsets without installing a native application.
-
-</p>
-
-</div>
-
-<ul class="feature-list">
-
-<li class="feature-list__item">
-<span class="feature-list__label">Engine</span>
-<span class="feature-list__desc">
-A-Frame 1.4.2 built on top of Three.js and WebXR.
-</span>
-</li>
-
-<li class="feature-list__item">
-<span class="feature-list__label">3D Environment</span>
-<span class="feature-list__desc">
-Custom GLTF reconstruction of Saidpur Village optimized for real-time
-browser rendering.
-</span>
-</li>
-
-<li class="feature-list__item">
-<span class="feature-list__label">360° Media</span>
-<span class="feature-list__desc">
-Panoramic photo and video environments with cross-platform playback support.
-</span>
-</li>
-
-<li class="feature-list__item">
-<span class="feature-list__label">Narrator System</span>
-<span class="feature-list__desc">
-Custom A-Frame component featuring handwritten GLSL shaders and procedural
-animation.
-</span>
-</li>
-
-<li class="feature-list__item">
-<span class="feature-list__label">Audio</span>
-<span class="feature-list__desc">
-Web Audio API with AudioBuffer caching for uninterrupted narration inside
-WebXR sessions.
-</span>
-</li>
-
-<li class="feature-list__item">
-<span class="feature-list__label">Interaction</span>
-<span class="feature-list__desc">
-Raycaster-based hotspot system with VR controller support and desktop
-fallback controls.
-</span>
-</li>
-
-<li class="feature-list__item">
-<span class="feature-list__label">Programming</span>
-<span class="feature-list__desc">
-Vanilla JavaScript, HTML5, CSS3, custom A-Frame components, and GLSL shaders.
-</span>
-</li>
-
-<li class="feature-list__item">
-<span class="feature-list__label">Deployment</span>
-<span class="feature-list__desc">
-Single-page WebXR application running entirely inside the browser with no
-framework dependency.
-</span>
 </li>
 
 </ul>
@@ -679,13 +965,13 @@ Design Principles
 <div>
 
 <p class="insight-item__title">
-Memory is Spatial.
+Story Before Technology.
 </p>
 
 <p class="insight-item__text">
 
-Stories become more meaningful when attached to physical locations rather
-than presented as disconnected historical facts.
+Every technical decision — shaders, locomotion, audio architecture — was
+chosen to serve a moment in the story, not the other way around.
 
 </p>
 
@@ -702,13 +988,13 @@ than presented as disconnected historical facts.
 <div>
 
 <p class="insight-item__title">
-Technology Should Support the Story.
+Memory Is Spatial.
 </p>
 
 <p class="insight-item__text">
 
-Every technical decision—from shaders to locomotion—was designed to
-strengthen immersion without distracting from the historical narrative.
+Stories land harder when they're tied to a specific place a visitor can
+stand in, rather than presented as disconnected facts.
 
 </p>
 
@@ -725,13 +1011,13 @@ strengthen immersion without distracting from the historical narrative.
 <div>
 
 <p class="insight-item__title">
-Accessibility Matters.
+Visitor Agency.
 </p>
 
 <p class="insight-item__text">
 
-The experience gracefully scales from desktop browsers to fully immersive VR
-headsets so the project remains accessible regardless of hardware ownership.
+Free exploration and guided navigation are both always available — the
+visitor decides how much to be led.
 
 </p>
 
@@ -748,14 +1034,13 @@ headsets so the project remains accessible regardless of hardware ownership.
 <div>
 
 <p class="insight-item__title">
-Multiple Perspectives.
+Design for the First-Time Visitor.
 </p>
 
 <p class="insight-item__text">
 
-The same place is presented simultaneously as architecture, documentary
-media, and personal testimony, encouraging users to construct their own
-understanding of history.
+Every onboarding step and cinematic can be skipped, and nothing assumes the
+visitor has used VR before or has anyone nearby to explain it.
 
 </p>
 
@@ -772,13 +1057,14 @@ understanding of history.
 <div>
 
 <p class="insight-item__title">
-Immersion Should Never Become Friction.
+Multiple Perspectives.
 </p>
 
 <p class="insight-item__text">
 
-Every onboarding step, cinematic, and guided interaction can be skipped,
-allowing visitors to remain in control of their own experience.
+The same location is presented as architecture, documentary media, and
+personal testimony at once, so visitors build their own understanding
+rather than receive a single account.
 
 </p>
 
@@ -791,39 +1077,78 @@ allowing visitors to remain in control of their own experience.
 </section>
 
 <!-- ===========================================================
-ROLE
+COMMERCIAL / REAL-WORLD TRANSFER
 =========================================================== -->
-<section id="role" class="proj-section">
+<section id="transfer" class="proj-section">
 
 <h2 class="proj-section__heading">
-Role & Contribution
+What This Project Demonstrates
 </h2>
-
-<figure class="proj-banner">
-    <img
-        src="pictures/role-contribution.jpg"
-        alt="Development process showing the creation of the VR experience"
-        loading="lazy"
-    >
-</figure>
 
 <div class="proj-prose">
 
 <p>
 
-I independently designed and developed the entire experience, including the
-scene architecture, interaction systems, guided tour framework, custom
-polyhedron narrator, shader development, WebXR audio pipeline, UI, spatial
-interaction design, and integration of oral testimonies into the virtual
-environment.
+This wasn't a commercial client project — there was no brand, venue
+contract, or business outcome attached to it. It was designed, built, and
+exhibited as a real installation at NYU Shanghai's capstone show, a
+three-day event where it ran for the public rather than living only as a
+link I sent people. That distinction matters: the experience had to hold up
+in front of visitors I didn't know, without me there to explain it every
+time.
 
 </p>
 
+<ul class="feature-list">
+
+<li class="feature-list__item">
+<span class="feature-list__label">Designing around a guest, not a screen</span>
+<span class="feature-list__desc">
+Every decision started from what a visitor walking up cold would notice,
+feel, or do next.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Structuring a complete journey</span>
+<span class="feature-list__desc">
+Entry, orientation, exploration, and return were all designed deliberately
+for someone with no prior context.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Building for a physical installation</span>
+<span class="feature-list__desc">
+The experience had to run reliably across a three-day public exhibition,
+not just in a controlled demo environment.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Working across touchpoints</span>
+<span class="feature-list__desc">
+3D reconstruction, documentary media, spatial audio, and interaction design
+had to function as one coherent experience, not separate features.
+</span>
+</li>
+
+<li class="feature-list__item">
+<span class="feature-list__label">Prototyping ideas directly</span>
+<span class="feature-list__desc">
+Because I could build what I designed, concepts got tested against a real,
+running installation rather than a deck.
+</span>
+</li>
+
+</ul>
+
 <p>
 
-The project required balancing immersive experience design, front-end
-engineering, historical research, UX design, and technical problem solving
-to create a cohesive interactive narrative.
+I'd approach a commercial installation the same way: understand what the
+guest is meant to feel and do at each stage first, design for someone
+encountering it with zero instruction, and only then decide which
+technologies earn their place in delivering that.
 
 </p>
 
@@ -845,98 +1170,63 @@ Reflection
 
 <p>
 
-This project challenged me to think about virtual reality not simply as a
-visual medium, but as a way of communicating memory through space.
-Developing the experience reinforced how interaction design, storytelling,
-and software engineering can work together to make history feel immediate
-rather than distant.
+This project changed how I think about immersive technology — not as a
+visual upgrade over a screen, but as a way of letting content live in
+space, where movement and attention become part of the storytelling itself.
 
 </p>
 
 <p>
 
-More importantly, it demonstrated that immersive technology can preserve
-local histories in ways that traditional media cannot. By allowing users to
-walk through reconstructed environments while listening to personal
-testimonies, architecture itself becomes part of the storytelling process.
+Watching people encounter it cold over three days at the exhibition, rather
+than only testing it myself, taught me how different "working" is from
+"working for a stranger who's never done this before." Small things — how
+obvious a hotspot needed to look, how long an intro could run before people
+lost patience — only became clear once real visitors were the ones
+standing there.
 
 </p>
-
-</div>
-
-</section>
-
-<!-- ===========================================================
-GALLERY
-=========================================================== -->
-
-<section id="gallery" class="proj-section">
-
-<h2 class="proj-section__heading">
-Gallery
-</h2>
-
-<div class="proj-prose">
 
 <p>
 
-Additional screenshots and videos from the WebXR experience.
+If I were taking this experience toward a larger, ongoing public
+installation, the next steps would build on that: more structured
+observation of where visitors hesitate or disengage, understanding
+throughput for multiple simultaneous guests, and thinking through how the
+piece could integrate with a permanent physical space rather than a
+temporary booth.
 
 </p>
 
 </div>
 
-<div class="image-grid image-grid--3col">
+<figure class="proj-banner">
+    <img
+        src="pictures/partition04.jpg"
+        alt="The installation running at the NYU Shanghai capstone exhibition"
+        loading="lazy"
+    >
+    <figcaption>
+        The installation as exhibited over three days at NYU Shanghai's
+        capstone show.
+    </figcaption>
+</figure>
 
-<div class="image-grid__item">
-<img class="image-grid__img"
-src="pictures/partition01.jpg"
+<figure class="proj-banner">
+    <img
+        src="pictures/partition05.jpg"
+        alt="Additional view of the reconstructed environment"
+        loading="lazy"
+    >
+</figure>
 
-loading="lazy">
-<p class="image-grid__caption"></p>
-</div>
-
-<div class="image-grid__item">
-<img class="image-grid__img"
-src="pictures/partition02.jpg"
-
-loading="lazy">
-<p class="image-grid__caption"></p>
-</div>
-
-<div class="image-grid__item">
-<img class="image-grid__img"
-src="pictures/partition03.jpg"
-
-loading="lazy">
-<p class="image-grid__caption"></p>
-</div>
-
-<div class="image-grid__item">
-<img class="image-grid__img"
-src="pictures/partition04.jpg"
-
-loading="lazy">
-<p class="image-grid__caption"></p>
-</div>
-
-<div class="image-grid__item">
-<img class="image-grid__img"
-src="pictures/partition05.jpg"
-
-loading="lazy">
-<p class="image-grid__caption"></p>
-</div>
-
-<div class="image-grid__item">
-<img class="image-grid__img"
-src="pictures/partition06.jpg"
-
-loading="lazy">
-<p class="image-grid__caption"></p>
-</div>
-
-</div>
+<figure class="proj-banner">
+    <img
+        src="pictures/partition06.jpg"
+        alt="Additional view of a visitor interaction hotspot"
+        loading="lazy"
+    >
+</figure>
 
 </section>
 
